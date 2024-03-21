@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   StyledHeader,
   LogoStyle,
-  Button,
   NavLinkList,
   NavLinkItem,
 } from "./Header.styled";
@@ -11,6 +10,7 @@ import { ReactComponent as DiscordSvg } from "../../Images/Svg/Discord.svg";
 import { ReactComponent as LogomarkSvg } from "../../Images/Svg/Logomark.svg";
 import { ReactComponent as TwiterSvg } from "../../Images/Svg/Twiter.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import BtnMenu from "../Buttons/BtnMenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,11 +25,16 @@ const Header = () => {
         <LogoStyle as={LogoSvg} />
       </a>
 
+      {isMenuOpen && (
+        <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      )}
       <NavLinkList>
         <NavLinkItem>
-          <Button type="button" onClick={toggleMenu}>
-            <span>{!isMenuOpen ? "MENU" : "CLOSE"}</span>
-          </Button>
+          <BtnMenu
+            onClick={toggleMenu}
+            toggleMenu={toggleMenu}
+            isMenuOpen={isMenuOpen}
+          />
         </NavLinkItem>
 
         <NavLinkItem>
@@ -48,7 +53,6 @@ const Header = () => {
           </a>
         </NavLinkItem>
       </NavLinkList>
-      {isMenuOpen && <BurgerMenu onClose={toggleMenu} />}
     </StyledHeader>
   );
 };

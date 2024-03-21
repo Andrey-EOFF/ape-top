@@ -22,6 +22,12 @@ export const BurgerMenuWrapper = styled.div`
   flex-direction: column;
 
   background-color: ${Colors.BgColorMain};
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: flex-end;
+    background-color: unset;
+  }
 `;
 
 export const BurgNav = styled.div`
@@ -37,12 +43,30 @@ export const NavList = styled.ul`
   gap: 16px;
 
   @media screen and (min-width: 768px) {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    padding-top: 8px;
+    gap: 0px;
+    border-radius: 12px;
   }
 `;
 
 export const NavItem = styled.li`
   gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+
+    background-color: #1e1e1e1a;
+  }
 `;
 
 export const Span = styled.span`
@@ -66,34 +90,17 @@ export const LogoStyle = styled.svg`
       fill: ${Colors.ColorAkcent};
     }
   }
-`;
-
-export const Button = styled.button`
-  position: relative;
-
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 10px;
-
-  background-color: #1e1e1e1a;
-
-  /* font-family: ; */
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
-
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SpanBtn = styled.span`
   color: ${Colors.ColorWhite};
+`;
+
+export const BtnBrMenu = styled.button`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;

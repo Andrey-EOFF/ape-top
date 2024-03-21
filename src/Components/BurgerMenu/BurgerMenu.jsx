@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BurgNav,
   BurgerMenuWrapper,
@@ -6,21 +6,30 @@ import {
   NavItem,
   NavList,
   Span,
-  SpanBtn,
 } from "./BurgerMenu.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
-import { Button } from "../Header/Header.styled";
 
-const BurgerMenu = ({ onClose }) => {
+const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        toggleMenu();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen, toggleMenu]);
+
   return (
     <BurgerMenuWrapper>
       <BurgNav>
         <a href="/">
           <LogoStyle as={LogoSvg} />
         </a>
-        <Button onClick={onClose}>
-          <SpanBtn>MENU</SpanBtn>
-        </Button>
       </BurgNav>
       <NavList>
         <NavItem>

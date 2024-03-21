@@ -48,31 +48,31 @@ export const LogoStyle = styled.svg`
   }
 `;
 
-export const Button = styled.button`
-  position: relative;
+// export const Button = styled.button`
+//   position: relative;
 
-  width: 48px;
-  height: 48px;
+//   width: 48px;
+//   height: 48px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  border-radius: 10px;
+//   border-radius: 10px;
 
-  background-color: #1e1e1e1a;
+//   background-color: #1e1e1e1a;
 
-  /* font-family: ; */
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
+//   /* font-family: ; */
+//   font-size: 12px;
+//   line-height: 117%;
+//   text-transform: uppercase;
 
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-`;
+//   appearance: none;
+//   border: none;
+//   outline: none;
+//   background: none;
+//   cursor: pointer;
+// `;
 
 export const NavLinkList = styled.ul`
   display: flex;
