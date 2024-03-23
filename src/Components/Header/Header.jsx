@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import {
-  StyledHeader,
   LogoStyle,
   NavLinkList,
   NavLinkItem,
+  NavLinkItemMenu,
+  HeaderSection,
 } from "./Header.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
 import { ReactComponent as DiscordSvg } from "../../Images/Svg/Discord.svg";
@@ -20,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <StyledHeader>
+    <HeaderSection>
       <a href="/">
         <LogoStyle as={LogoSvg} />
       </a>
@@ -29,31 +30,31 @@ const Header = () => {
         <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       )}
       <NavLinkList>
-        <NavLinkItem>
+        <NavLinkItemMenu isMenuOpen={isMenuOpen}>
           <BtnMenu
             onClick={toggleMenu}
             toggleMenu={toggleMenu}
             isMenuOpen={isMenuOpen}
           />
-        </NavLinkItem>
+        </NavLinkItemMenu>
 
-        <NavLinkItem>
+        <NavLinkItem isMenuOpen={isMenuOpen}>
           <a href="/">
             <DiscordSvg />
           </a>
         </NavLinkItem>
-        <NavLinkItem>
+        <NavLinkItem isMenuOpen={isMenuOpen}>
           <a href="/">
             <LogomarkSvg />
           </a>
         </NavLinkItem>
-        <NavLinkItem>
+        <NavLinkItem isMenuOpen={isMenuOpen}>
           <a href="/">
             <TwiterSvg />
           </a>
         </NavLinkItem>
       </NavLinkList>
-    </StyledHeader>
+    </HeaderSection>
   );
 };
 

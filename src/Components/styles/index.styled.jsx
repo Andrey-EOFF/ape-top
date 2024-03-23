@@ -3,7 +3,7 @@ import { SizeDev, Colors } from "./ConstantStyles";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Right Grotesk Compact', sans-serif;
     margin: 0;
     padding: 0;
     background-color:${Colors.BgColorMain};
@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding: 0 8px;
   padding-top: 54px;
   margin: 0 auto;
-  width: 100%;
+  width: 344px;
 
   /* Mobile */
   @media screen and (min-width: ${SizeDev.MOB_START}) and (max-width: ${SizeDev.MOB_END}) {
@@ -28,7 +28,7 @@ export const Container = styled.div`
 
   /* Desktop */
   @media screen and (min-width: ${SizeDev.DESK}) {
-    width: ${SizeDev.DESK};
+    width: ${SizeDev.DESK_END};
     padding-top: 16px;
   }
 `;

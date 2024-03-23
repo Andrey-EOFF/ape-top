@@ -1,14 +1,12 @@
 import React from "react";
-import { Button } from "./BtnMenu.styled";
+import { MenuButton } from "./BtnMenu.styled";
 
 const BtnMenu = ({ isMenuOpen, toggleMenu }) => {
-
-
   return (
     <div>
-      <Button type="button" onClick={toggleMenu}>
+      <MenuButton type="button" onClick={toggleMenu} isMenuOpen={isMenuOpen}>
         <span>{isMenuOpen ? "CLOSE" : "MENU"}</span>
-      </Button>
+      </MenuButton>
     </div>
   );
 };

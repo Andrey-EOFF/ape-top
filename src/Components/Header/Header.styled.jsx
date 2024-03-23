@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { SizeDev, Colors } from "../styles/ConstantStyles";
+import { SizeDev, Colors, Utils } from "../styles/ConstantStyles";
 
-export const StyledHeader = styled.div`
+export const HeaderSection = styled.div`
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  color: white;
   min-width: 344px;
   max-width: calc(${SizeDev.MOB_END} - 16px);
   height: 542px;
@@ -13,13 +13,16 @@ export const StyledHeader = styled.div`
   margin: 0 auto;
   padding: 8px;
 
-  @media screen and (min-width: 768px) {
-    min-width: 768px;
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    min-width: ${SizeDev.TAB};
+    height: 421px;
     padding: 12px;
+    position: absolute;
   }
 
-  @media screen and (min-width: 1280px) {
-    min-width: 1280px;
+  @media screen and (min-width: ${SizeDev.DESK}) {
+    min-width: ${SizeDev.DESK_END};
+    height: 677px;
     padding: 24px 96px 0 96px;
   }
 `;
@@ -34,6 +37,7 @@ export const LogoStyle = styled.svg`
 
   path {
     fill: ${Colors.ColorBlack};
+    transition: ${Utils.transition};
   }
 
   &:hover {
@@ -42,49 +46,65 @@ export const LogoStyle = styled.svg`
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: ${SizeDev.DESK}) {
     width: 72px;
     height: 50px;
   }
 `;
-
-// export const Button = styled.button`
-//   position: relative;
-
-//   width: 48px;
-//   height: 48px;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   border-radius: 10px;
-
-//   background-color: #1e1e1e1a;
-
-//   /* font-family: ; */
-//   font-size: 12px;
-//   line-height: 117%;
-//   text-transform: uppercase;
-
-//   appearance: none;
-//   border: none;
-//   outline: none;
-//   background: none;
-//   cursor: pointer;
-// `;
 
 export const NavLinkList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: ${SizeDev.DESK}) {
     gap: 16px;
   }
 `;
 
 export const NavLinkItem = styled.li`
+  width: 48px;
+  height: 48px;
+  display: flex;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: ${({ isMenuOpen }) =>
+    isMenuOpen
+      ? Colors.BgBtMenuOpen
+      : Colors.BgBtMenu}; /* Змініть ці кольори на ваші власні */
+  path {
+    fill: ${({ isMenuOpen }) =>
+      isMenuOpen
+        ? Colors.ColorWhite
+        : Colors.ColorBlack}; /* Змініть ці кольори на ваші власні */
+  }
+
+  transition: ${Utils.transition};
+
+  &:hover {
+    path {
+      fill: ${Colors.ColorWhite};
+    }
+  }
+
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    background-color: ${Colors.BgBtMenu};
+    path {
+      fill: ${Colors.ColorBlack};
+    }
+  }
+
+  @media screen and (min-width: ${SizeDev.DESK}) {
+    gap: 16px;
+
+    width: 80px;
+    height: 80px;
+  }
+`;
+
+export const NavLinkItemMenu = styled.li`
   width: 48px;
   height: 48px;
 
@@ -94,20 +114,28 @@ export const NavLinkItem = styled.li`
 
   border-radius: 10px;
 
+  font-family: "Messina Sans Mono Regular";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.16;
+
   z-index: 50;
 
-  background-color: ${({ isOpen }) =>
-    isOpen ? Colors.BgBtMenu : Colors.BgBtMenuOpen};
+  background-color: ${({ isMenuOpen }) =>
+    isMenuOpen ? Colors.BgBtMenuOpen : Colors.BgBtMenu};
 
-  path {
-    fill: ${({ isOpen }) => (isOpen ? Colors.ColorBlack : Colors.ColorWhite)};
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    border-top-left-radius: ${({ isMenuOpen }) => (isMenuOpen ? 0 : 10)};
+    border-bottom-left-radius: ${({ isMenuOpen }) => (isMenuOpen ? 0 : 10)};
+    background-color: ${Colors.BgBtMenu};
   }
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: ${SizeDev.DESK}) {
     width: 80px;
     height: 80px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.19;
   }
 `;

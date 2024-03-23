@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Colors, SizeDev } from "../styles/ConstantStyles";
 
-export const Button = styled.button`
+export const MenuButton = styled.button`
   position: relative;
 
   width: 48px;
@@ -12,11 +13,12 @@ export const Button = styled.button`
 
   border-radius: 10px;
 
-  background-color: #1e1e1e1a;
+  background-color: ${Colors.ColorBlack};
 
-  /* font-family: ; */
+  font-family: "Messina Sans Mono Regular";
   font-size: 12px;
-  line-height: 117%;
+  font-weight: 600;
+  line-height: 1.17;
   text-transform: uppercase;
 
   appearance: none;
@@ -24,4 +26,22 @@ export const Button = styled.button`
   outline: none;
   background: none;
   cursor: pointer;
+
+  &:hover {
+    color: ${Colors.ColorWhite};
+    
+  }
+
+  color: ${({ isMenuOpen }) =>
+    isMenuOpen ? Colors.ColorWhite : Colors.ColorBlack};
+
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    color: ${Colors.ColorBlack};
+  }
+
+  @media screen and (min-width: ${SizeDev.DESK}) {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.19;
+  }
 `;

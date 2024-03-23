@@ -14,7 +14,7 @@ export const BurgerMenuWrapper = styled.div`
   min-width: 344px;
   max-width: ${SizeDev.MOB_END};
   height: 100%;
-  padding: 62px 16px 24px 16px;
+  padding: 8px;
 
   display: flex;
   justify-content: flex-start;
@@ -23,10 +23,11 @@ export const BurgerMenuWrapper = styled.div`
 
   background-color: ${Colors.BgColorMain};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${SizeDev.TAB}) {
     display: flex;
     align-items: flex-end;
     background-color: unset;
+    display: block;
   }
 `;
 
@@ -41,22 +42,41 @@ export const NavList = styled.ul`
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-top: 130px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    position: absolute;
+
+    width: 270px;
+    height: 48px;
+    margin: 0;
+
+    top: 12px;
+    right: -84px;
     display: flex;
     flex-direction: row;
     align-content: space-around;
-    padding-top: 8px;
     gap: 0px;
-    border-radius: 12px;
+
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: ${Colors.BgHeroBtn};
+
+    @media screen and (min-width: ${SizeDev.DESK}) {
+      width: 430px;
+      height: 80px;
+
+      right: -304px;
+      top: 24px;
+    }
   }
 `;
 
 export const NavItem = styled.li`
   gap: 16px;
 
-  @media screen and (min-width: 768px) {
-    width: 48px;
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    width: 100px;
     height: 48px;
 
     display: flex;
@@ -64,13 +84,31 @@ export const NavItem = styled.li`
     align-items: center;
 
     gap: 0;
-
-    background-color: #1e1e1e1a;
   }
 `;
 
 export const Span = styled.span`
   color: ${Colors.ColorWhite};
+  font-family: "Messina Sans Mono Regular";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.17;
+
+    color: ${Colors.ColorBlack};
+  }
+
+  @media screen and (min-width: ${SizeDev.DESK}) {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.18;
+
+    color: ${Colors.ColorBlack};
+  }
 `;
 
 export const LogoStyle = styled.svg`
@@ -93,10 +131,6 @@ export const LogoStyle = styled.svg`
   @media screen and (min-width: 768px) {
     display: none;
   }
-`;
-
-export const SpanBtn = styled.span`
-  color: ${Colors.ColorWhite};
 `;
 
 export const BtnBrMenu = styled.button`
