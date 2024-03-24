@@ -11,7 +11,8 @@ import { ReactComponent as DiscordSvg } from "../../Images/Svg/Discord.svg";
 import { ReactComponent as LogomarkSvg } from "../../Images/Svg/Logomark.svg";
 import { ReactComponent as TwiterSvg } from "../../Images/Svg/Twiter.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import BtnMenu from "./Buttons/BtnMenu";
+import BtnMenu from "../Buttons/BtnMenu";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

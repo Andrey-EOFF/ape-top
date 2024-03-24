@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev, Utils } from "../../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
 export const MenuButton = styled.button`
   position: relative;
