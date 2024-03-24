@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev } from "../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
 export const BurgerMenuWrapper = styled.div`
   position: absolute;
@@ -93,12 +93,20 @@ export const Span = styled.span`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+  text-decoration: none; 
+  transition: border-bottom 0.3s ease;
+  transition: ${Utils.transition};
+
+  &:hover {
+    border-bottom: 2px solid ${Colors.ColorWhite};
+    padding-bottom: 2px;
+    color: ${Colors.ColorWhite};
+  }
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     font-size: 12px;
     font-weight: 600;
     line-height: 1.17;
-
     color: ${Colors.ColorBlack};
   }
 
@@ -106,7 +114,6 @@ export const Span = styled.span`
     font-size: 16px;
     font-weight: 600;
     line-height: 1.18;
-
     color: ${Colors.ColorBlack};
   }
 `;

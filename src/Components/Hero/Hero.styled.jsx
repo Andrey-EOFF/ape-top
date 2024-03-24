@@ -125,20 +125,13 @@ export const HeroTextThree = styled.p`
   @media (min-width: ${SizeDev.TAB}) {
     text-align: justify;
 
-    &::before {
-      content: "emptyplace";
-      color: transparent;
-    }
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     font-size: 16px;
     line-height: 1.19;
 
-    &::before {
-      content: "empty";
-      color: transparent;
-    }
+   
   }
 `;
 

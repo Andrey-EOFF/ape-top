@@ -1,50 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import heroImgMob from '../../Images/Png/heroMob.png';
-import heroImgTab from '../../Images/Png/heroTab.png';
-import heroImgDesk from '../../Images/Png/heroDesk.png';
+import React, { useState, useEffect } from "react";
+import heroImgMob from "../../Images/Png/heroMob.png";
+import heroImgTab from "../../Images/Png/heroTab.png";
+import heroImgDesk from "../../Images/Png/heroDesk.png";
 import {
   HeroBtn,
   HeroCont,
   HeroImage,
   HeroMainTitle,
-  HeroSection, HeroTextThree, HeroTextkOne, HeroTextkTwo,
-
-
-} from './Hero.styled';
+  HeroSection,
+  HeroTextThree,
+  HeroTextkOne,
+  HeroTextkTwo,
+} from "./Hero.styled";
 
 const Hero = () => {
-  const [screenSize, setScreenSize] = useState('');
+  const [screenSize, setScreenSize] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        setScreenSize('small');
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        setScreenSize("small");
       } else if (
-        window.matchMedia('(min-width: 768px) and (max-width: 1279px)').matches
+        window.matchMedia("(min-width: 768px) and (max-width: 1279px)").matches
       ) {
-        setScreenSize('medium');
-      } else if (window.matchMedia('(min-width: 1280px)').matches) {
-        setScreenSize('large');
+        setScreenSize("medium");
+      } else if (window.matchMedia("(min-width: 1280px)").matches) {
+        setScreenSize("large");
       }
     };
 
-    handleResize(); 
-    window.addEventListener('resize', handleResize); 
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize); 
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   let imgSrc;
+
   switch (screenSize) {
-    case 'small':
+    case "small":
       imgSrc = heroImgMob;
       break;
-    case 'medium':
+    case "medium":
       imgSrc = heroImgTab;
       break;
-    case 'large':
+    case "large":
       imgSrc = heroImgDesk;
       break;
     default:
@@ -63,8 +65,8 @@ const Hero = () => {
       <HeroCont>
         <HeroBtn type="button">Meet Apes</HeroBtn>
         <HeroTextThree>
-          Yacht Ape is a collection of unique digital apes that you can own in NFT
-          format
+          Yacht Ape is a collection of unique digital apes that you can own in
+          NFT format
         </HeroTextThree>
       </HeroCont>
     </HeroSection>

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MindMap = () => {
-  return (
-    <div>MindMap</div>
-  )
-}
+  return <div>MindMap</div>;
+};
 
-export default MindMap
+export default MindMap;

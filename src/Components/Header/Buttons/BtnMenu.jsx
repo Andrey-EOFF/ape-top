@@ -1,11 +1,11 @@
 import React from "react";
-import { MenuButton } from "./BtnMenu.styled";
+import { MenuButton, Span } from "./BtnMenu.styled";
 
 const BtnMenu = ({ isMenuOpen, toggleMenu }) => {
   return (
     <div>
       <MenuButton type="button" onClick={toggleMenu} isMenuOpen={isMenuOpen}>
-        <span>{isMenuOpen ? "CLOSE" : "MENU"}</span>
+        <Span>{isMenuOpen ? "CLOSE" : "MENU"}</Span>
       </MenuButton>
     </div>
   );

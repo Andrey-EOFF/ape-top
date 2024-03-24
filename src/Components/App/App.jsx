@@ -1,15 +1,21 @@
-// import About from "../About/About.jsx";
+import About from "../About/About.jsx";
 import Header from "../Header/Header.jsx";
 import Hero from "../Hero/Hero.jsx";
+
 import "./App.styled.jsx";
+import { Container } from "./App.styled.jsx";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <Header />
+      <Header />
+
+      <Container>
         <Hero />
-      </div>
+      </Container>
+      <Container>
+        <About />
+      </Container>
     </>
   );
 }

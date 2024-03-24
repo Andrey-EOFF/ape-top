@@ -16,10 +16,7 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 344px;
 
-  /* Mobile */
-  @media screen and (min-width: ${SizeDev.MOB_START}) and (max-width: ${SizeDev.MOB_END}) {
-    width: 100%;
-  }
+
 
   /* Tablet */
   @media screen and (min-width: ${SizeDev.TAB}) {

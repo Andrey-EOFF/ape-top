@@ -71,19 +71,16 @@ export const NavLinkItem = styled.li`
   align-items: center;
   border-radius: 10px;
   background-color: ${({ isMenuOpen }) =>
-    isMenuOpen
-      ? Colors.BgBtMenuOpen
-      : Colors.BgBtMenu}; /* Змініть ці кольори на ваші власні */
+    isMenuOpen ? Colors.BgBtMenuOpen : Colors.BgBtMenu};
   path {
     fill: ${({ isMenuOpen }) =>
-      isMenuOpen
-        ? Colors.ColorWhite
-        : Colors.ColorBlack}; /* Змініть ці кольори на ваші власні */
+      isMenuOpen ? Colors.ColorWhite : Colors.ColorBlack};
   }
-
   transition: ${Utils.transition};
 
   &:hover {
+    background-color: ${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.BgBtMenuOpenHover : Colors.BgBtMenuHover};
     path {
       fill: ${Colors.ColorWhite};
     }
@@ -98,7 +95,6 @@ export const NavLinkItem = styled.li`
 
   @media screen and (min-width: ${SizeDev.DESK}) {
     gap: 16px;
-
     width: 80px;
     height: 80px;
   }

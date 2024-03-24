@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev } from "../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../../styles/ConstantStyles";
 
 export const MenuButton = styled.button`
   position: relative;
@@ -20,16 +20,17 @@ export const MenuButton = styled.button`
   font-weight: 600;
   line-height: 1.17;
   text-transform: uppercase;
-
+  text-decoration: none;
   appearance: none;
   border: none;
   outline: none;
   background: none;
   cursor: pointer;
 
+  transition: ${Utils.transition};
+
   &:hover {
     color: ${Colors.ColorWhite};
-    
   }
 
   color: ${({ isMenuOpen }) =>
@@ -43,5 +44,15 @@ export const MenuButton = styled.button`
     font-size: 16px;
     font-weight: 600;
     line-height: 1.19;
+  }
+`;
+
+export const Span = styled.span`
+  transition: ${Utils.transition};
+
+  &:hover {
+    border-bottom: 2px solid ${Colors.ColorWhite};
+    padding-bottom: 2px;
+    color: ${Colors.ColorWhite};
   }
 `;
