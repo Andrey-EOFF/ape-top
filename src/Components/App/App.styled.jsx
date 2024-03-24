@@ -3,7 +3,7 @@ import { SizeDev } from "../styles/ConstantStyles";
 
 export const Container = styled.div`
   width: 344px;
-  padding: 0 62px;
+  padding: 0 60px;
   margin-left: auto;
   margin-right: auto;
 
