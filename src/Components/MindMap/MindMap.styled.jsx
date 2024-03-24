@@ -89,7 +89,6 @@ export const Card = styled.div`
     height: 24px;
   }
   a {
-    color: white;
     text-decoration: underline;
   }
 

@@ -62,7 +62,11 @@ const MindMap = () => {
           >
             <CardText>{item.text}</CardText>
             <CardTitle>{item.title}</CardTitle>
-            {item.icon && <MindArrow />}
+            {item.icon && (
+              <a href={item.url} key={index}>
+                <MindArrow />
+              </a>
+            )}
           </Card>
         ))}
       </CardContainer>
