@@ -6,6 +6,7 @@ import Hero from "../Hero/Hero.jsx";
 import "./App.styled.jsx";
 import { Container } from "./App.styled.jsx";
 import RunningLine from "../RunningLine/RunningLine.jsx";
+import MindMap from "../MindMap/MindMap.jsx";
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
       <Container>
         <About />
       </Container>
-
       <RunningLine />
+      <Container>
+        <MindMap />
+      </Container>
     </>
   );
 }
