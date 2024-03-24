@@ -77,7 +77,7 @@ export const CardContainer = styled.div`
 
 export const Card = styled.div`
   position: relative;
-  display: flex;
+  display: ${({ isActive }) => (isActive ? "flex" : "none")};
   flex-direction: column;
   justify-content: space-between;
   padding: 24px 12px;
@@ -99,12 +99,14 @@ export const Card = styled.div`
   @media (min-width: ${SizeDev.TAB}) {
     width: ${cardSizes.tablet.width};
     height: ${cardSizes.tablet.height};
+    display: flex;
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     padding: 24px;
     width: ${cardSizes.desktop.width};
     height: ${cardSizes.desktop.height};
+    display: flex;
   }
 `;
 
@@ -163,29 +165,30 @@ export const MindArrow = styled(MindSvg)`
   }
 `;
 
-// export const SliderBtn = styled.button`
-//   width: 150px;
-//   height: 24px;
+export const PrevNextButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
 
-//   @media (min-width: ${SizeDev.TAB}) {
-//     display: none;
-//   }
-// `;
+  width: 150px;
+  margin-top: 24px;
 
-// export const PrevButton = styled.button`
+  margin-left: auto;
+  margin-right: auto;
 
-//   background-color: transparent;
-//   border: none;
-//   color: ${Colors.ColorWhite};
-//   font-size: 16px;
-//   cursor: pointer;
-// `;
+  button {
+    border: none;
+    background-color: transparent;
+    color: ${Colors.ColorWhite};
+    font-family: "Biro Script Plus Bold US";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
 
-// export const NextButton = styled.button`
+    cursor: pointer;
+  }
 
-//   background-color: transparent;
-//   border: none;
-//   color: ${Colors.ColorWhite};
-//   font-size: 16px;
-//   cursor: pointer;
-// `;
+  @media (min-width: ${SizeDev.TAB}) {
+    display: none;
+  }
+`;
