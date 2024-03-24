@@ -18,6 +18,7 @@ const cardSizes = {
   },
 };
 
+
 export const MindMapSection = styled.div`
   padding-top: 60px;
 

@@ -14,6 +14,7 @@ export const Colors = {
   BgBtMenu: "#1E1E1E1A",
   BgBtMenuOpen: "#FFFFFF1A",
   BgBtMenuOpen2: "#FFFFFF1A",
+  BgFaq: "#1e1e1e",
 
   // Text COLOR
 

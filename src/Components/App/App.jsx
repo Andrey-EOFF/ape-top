@@ -7,6 +7,8 @@ import "./App.styled.jsx";
 import { Container } from "./App.styled.jsx";
 import RunningLine from "../RunningLine/RunningLine.jsx";
 import MindMap from "../MindMap/MindMap.jsx";
+import Faq from "../Faq/Faq.jsx";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       <RunningLine />
       <Container>
         <MindMap />
+        <Faq />
       </Container>
     </>
   );
