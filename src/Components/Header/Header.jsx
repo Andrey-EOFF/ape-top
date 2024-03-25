@@ -5,6 +5,7 @@ import {
   NavLinkItem,
   NavLinkItemMenu,
   HeaderSection,
+  LinkLogo,
 } from "./Header.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
 import { ReactComponent as DiscordSvg } from "../../Images/Svg/Discord.svg";
@@ -22,9 +23,9 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <a href="/">
+      <LinkLogo href="https://Andrey-EOFF.github.io/ape-top">
         <LogoStyle as={LogoSvg} />
-      </a>
+      </LinkLogo>
 
       {isMenuOpen && (
         <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />

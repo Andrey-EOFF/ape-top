@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color:${Colors.BgColorMain};
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
   }
 `;
 
@@ -15,8 +19,6 @@ export const Container = styled.div`
   padding-top: 54px;
   margin: 0 auto;
   width: 344px;
-
-
 
   /* Tablet */
   @media screen and (min-width: ${SizeDev.TAB}) {

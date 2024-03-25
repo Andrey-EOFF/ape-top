@@ -34,6 +34,8 @@ export const LogoStyle = styled.svg`
   margin-top: 8px;
   cursor: pointer;
 
+ 
+
   path {
     fill: ${Colors.ColorBlack};
     transition: ${Utils.transition};
@@ -50,6 +52,16 @@ export const LogoStyle = styled.svg`
     height: 50px;
   }
 `;
+
+export const LinkLogo = styled.a`
+  width: 32px;
+  height: 48px;
+
+  @media screen and (min-width: ${SizeDev.DESK}) {
+    width: 72px;
+    height: 50px;
+  }
+`
 
 export const NavLinkList = styled.ul`
   display: flex;
