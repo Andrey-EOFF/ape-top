@@ -13,7 +13,6 @@ import { ReactComponent as TwiterSvg } from "../../Images/Svg/Twiter.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BtnMenu from "../Buttons/BtnMenu";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -49,7 +48,7 @@ const Header = () => {
           </a>
         </NavLinkItem>
         <NavLinkItem isMenuOpen={isMenuOpen}>
-          <a href="/">
+          <a href="https://discord.com/">
             <LogomarkSvg />
           </a>
         </NavLinkItem>

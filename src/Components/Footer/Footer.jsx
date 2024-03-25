@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { FooterSection, FooterText } from "./Footer.styled";
 
-const Footer = () => {
+const Footer = ({ isMenuOpen }) => {
   return (
-    <div>Footer</div>
-  )
-}
+    <FooterSection >
+      <FooterText>© Yacht ape 2024 all rights reserved</FooterText>
+    </FooterSection>
+  );
+};
 
-export default Footer
+export default Footer;

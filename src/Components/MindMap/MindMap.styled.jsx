@@ -31,7 +31,7 @@ export const MindMapSection = styled.div`
   }
 `;
 
-export const MindMapTitle = styled.h1`
+export const MindMapTitle = styled.h2`
   margin-bottom: 24px;
 
   color: ${Colors.ColorWhite};
@@ -110,7 +110,7 @@ export const Card = styled.div`
   }
 `;
 
-export const CardTitle = styled.h2`
+export const CardTitle = styled.h3`
   font-family: "Right Grotesk Compact";
   font-size: 32px;
   font-weight: 900;

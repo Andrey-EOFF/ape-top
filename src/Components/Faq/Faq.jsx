@@ -30,8 +30,8 @@ const Faq = () => {
         <FaqItem
           key={item.id}
           item={item}
-          isOpen={item.id === openId} // Проверяем, открыт ли текущий элемент
-          onClick={() => handleToggle(item.id)} // Передаем id элемента в обработчик события
+          isOpen={item.id === openId}
+          onClick={() => handleToggle(item.id)}
         />
       ))}
     </FaqSection>
@@ -58,7 +58,7 @@ const FaqItem = ({ item, isOpen, onClick }) => {
   }
 
   return (
-    <FaqItemContainer isOpen={isOpen} onClick={onClick}>
+    <FaqItemContainer id="faq" isOpen={isOpen} onClick={onClick}>
       {isOpen && (
         <FaqImage isOpen={isOpen} src={imgSrc} alt={`FAQ Image ${item.id}`} />
       )}

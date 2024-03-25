@@ -8,13 +8,11 @@
   @font-face {
     font-family: 'Messina Sans Mono';
     src: url('../../fonts/MessinaSans/MessinaSansMono-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
   }
 
   @font-face {
     font-family: 'Messina Sans Mono Regular';
-    src: url('../../fonts/MessinaSans/MessinaSansMono-Regular.ttf') format('truetype');
+    src: url('../../fonts/MessinaSans/MessinaSansMono-Light.ttf') format('truetype');
   }
 
   @font-face {
@@ -25,56 +23,9 @@
   @font-face {
     font-family: 'Biro Script Plus Bold';
     src: url('../../fonts/BiroScript/BiroScriptPlus-Sloppy.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
   }
   
-  
-  /* @font-face {
-    font-family: 'Messina Sans Mono Regular';
-    src: url('../assets/fonts/MessinaSansMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Biro Script Plus Bold US';
-    src: url('../assets/fonts/BiroScriptUSPlus-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Biro Script Plus Bold';
-    src: url('../assets/fonts/BiroScriptPlus-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Formular Regular';
-    src: url('../assets/fonts/Formular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Formular Bold';
-    src: url('../assets/fonts/Formular-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-
-   @font-face {
-    font-family: 'Right Grotesk Compact';
-    src: url('../assets/fonts/RightGrotesk-CompactBlack.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-   } */
-
   @font-face {
     font-family: 'Right Grotesk Compact';
     src: url('../../fonts/RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
   }

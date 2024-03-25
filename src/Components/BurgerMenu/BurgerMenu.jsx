@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import {
   BurgNav,
-  BurgerMenuWrapper,
+  BurgerMenuSection,
   LogoStyle,
   NavItem,
   NavList,
   Span,
 } from "./BurgerMenu.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
+import Footer from "../Footer/Footer";
 
 const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
   useEffect(() => {
@@ -24,8 +25,16 @@ const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
     };
   }, [isMenuOpen, toggleMenu]);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      toggleMenu();
+    }
+  };
+
   return (
-    <BurgerMenuWrapper>
+    <BurgerMenuSection>
       <BurgNav>
         <a href="/">
           <LogoStyle as={LogoSvg} />
@@ -33,22 +42,23 @@ const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
       </BurgNav>
       <NavList>
         <NavItem>
-          <Span>ABOUT</Span>
+          <Span onClick={() => scrollToSection("about")}>ABOUT</Span>
         </NavItem>
         <NavItem>
-          <Span>M-MAP</Span>
+          <Span onClick={() => scrollToSection("mindmap")}>M-MAP</Span>
         </NavItem>
         <NavItem>
-          <Span>FAQ</Span>
+          <Span onClick={() => scrollToSection("faq")}>FAQ</Span>
         </NavItem>
         <NavItem>
-          <Span>ARTS</Span>
+          <Span onClick={() => scrollToSection("arts")}>ARTS</Span>
         </NavItem>
         <NavItem>
-          <Span>MINT</Span>
+          <Span onClick={() => scrollToSection("arts")}>MINT</Span>
         </NavItem>
       </NavList>
-    </BurgerMenuWrapper>
+      <Footer isMenuOpen={isMenuOpen} />
+    </BurgerMenuSection>
   );
 };
 

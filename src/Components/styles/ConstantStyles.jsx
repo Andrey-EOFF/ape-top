@@ -28,5 +28,5 @@ export const Colors = {
 };
 
 export const Utils = {
-  transition: "1250ms ease",
+  transition: "250ms ease",
 };

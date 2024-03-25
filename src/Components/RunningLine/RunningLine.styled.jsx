@@ -3,20 +3,17 @@ import { Colors, SizeDev } from "../styles/ConstantStyles";
 
 export const StyledRunningLine = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 52px;
   white-space: nowrap;
   background-color: ${Colors.BgColorAkcent};
-
   color: ${Colors.ColorWhite};
 
   div {
     display: inline-block;
     align-content: center;
     text-align: center;
-
     font-family: "Right Grotesk Compact";
     font-size: 36px;
     font-weight: 900;
@@ -51,6 +48,7 @@ export const StyledRunningLine = styled.div`
       font-weight: 900;
       line-height: 1;
     }
+
     svg {
       margin-left: 36px;
       margin-right: 36px;

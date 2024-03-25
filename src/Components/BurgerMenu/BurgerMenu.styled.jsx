@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
-export const BurgerMenuWrapper = styled.div`
+export const BurgerMenuSection = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -93,7 +93,7 @@ export const Span = styled.span`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
-  text-decoration: none; 
+  text-decoration: none;
   transition: border-bottom 0.3s ease;
   transition: ${Utils.transition};
 
@@ -135,6 +135,7 @@ export const LogoStyle = styled.svg`
       fill: ${Colors.ColorAkcent};
     }
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }

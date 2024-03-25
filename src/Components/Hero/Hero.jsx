@@ -61,7 +61,7 @@ const Hero = () => {
         <span>APES</span>
       </HeroMainTitle>
       <HeroTextkTwo>Apes aRe eveRywhere</HeroTextkTwo>
-      <HeroImage src={imgSrc} alt="nft-monkey" />
+      <HeroImage src={imgSrc} alt="monkey" />
       <HeroCont>
         <HeroBtn type="button">Meet Apes</HeroBtn>
         <HeroTextThree>

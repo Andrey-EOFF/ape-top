@@ -9,19 +9,21 @@ import {
 } from "./Arts.styled";
 import { ArtSlides } from "../Data/ArtsData";
 
-
-
 const Arts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(1);
   const [totalSlides, setTotalSlides] = useState(0);
 
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? prevSlide : prevSlide - 1));
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? prevSlide : prevSlide - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === totalSlides - 1 ? prevSlide : prevSlide + 1));
+    setCurrentSlide((prevSlide) =>
+      prevSlide === totalSlides - 1 ? prevSlide : prevSlide + 1
+    );
   };
 
   const swipeHandlers = useSwipeable({
@@ -34,14 +36,12 @@ const Arts = () => {
     else if (e.key === "ArrowRight") handleNext();
   };
 
-
-
   const SlidesPerPage = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1024) {
-      setSlidesPerPage(4); 
+      setSlidesPerPage(4);
     } else if (screenWidth >= 768) {
-      setSlidesPerPage(2); 
+      setSlidesPerPage(2);
     } else {
       setSlidesPerPage(1);
     }
@@ -64,7 +64,7 @@ const Arts = () => {
       onKeyDown={handleKeyDown}
     >
       <ArtTitle>COLLECTION</ArtTitle>
-      <ArtsSlider slidesPerPage={slidesPerPage}>
+      <ArtsSlider>
         {ArtSlides.map((slide, index) => (
           <ArtSlide
             key={index}
@@ -81,8 +81,15 @@ const Arts = () => {
         ))}
       </ArtsSlider>
       <PrevNextButtons>
-        <button onClick={handlePrev} disabled={currentSlide === 0}>Prev</button>
-        <button onClick={handleNext} disabled={currentSlide === totalSlides - slidesPerPage}>Next</button>
+        <button onClick={handlePrev} disabled={currentSlide === 0}>
+          Prev
+        </button>
+        <button
+          onClick={handleNext}
+          disabled={currentSlide === totalSlides - slidesPerPage}
+        >
+          Next
+        </button>
       </PrevNextButtons>
     </ArtsSection>
   );

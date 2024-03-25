@@ -20,7 +20,6 @@ export const FaqTitle = styled.h2`
   font-weight: 900;
   line-height: 0.9;
   text-align: center;
-
   color: ${Colors.ColorWhite};
 
   @media (min-width: ${SizeDev.TAB}) {
@@ -32,7 +31,6 @@ export const FaqTitle = styled.h2`
 
   @media (min-width: ${SizeDev.DESK}) {
     margin-bottom: 80px;
-
     font-size: 160px;
     font-weight: 900;
   }
@@ -48,7 +46,6 @@ export const FaqItemContainer = styled.div`
 
   @media (min-width: ${SizeDev.TAB}) {
     padding: 18px;
-
     border-radius: 16px;
   }
 
@@ -65,10 +62,9 @@ export const FaqQuestion = styled.h3`
   font-weight: 900;
   line-height: 1;
   text-align: left;
-
   transition: ${Utils.transition};
-
-  color: ${({ isOpen }) => (isOpen ? Colors.ColorAkcent : Colors.ColorWhite)};
+  color: ${({ isOpen }) =>
+    isOpen ? Colors.ColorAkcent : Colors.ColorWhite};
 
   &:hover {
     color: ${Colors.ColorAkcent};
@@ -93,13 +89,8 @@ export const FaqAnswer = styled.p`
   font-weight: 400;
   line-height: 1.17;
   text-align: left;
-
   color: ${Colors.ColorWhite};
-
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
-
-  @media (min-width: ${SizeDev.TAB}) {
-  }
 
   @media (min-width: ${SizeDev.DESK}) {
     font-size: 16px;
@@ -110,12 +101,10 @@ export const FaqAnswer = styled.p`
 export const BoxOpen = styled.div``;
 
 export const NumQues = styled.span`
-  color: ${({ isOpen }) => (isOpen ? Colors.ColorWhite : Colors.ColorAkcent)};
-
+  color: ${({ isOpen }) =>
+    isOpen ? Colors.ColorWhite : Colors.ColorAkcent};
   margin-right: 8px;
-
   padding-top: 3px;
-
   font-family: "Biro Script Plus Bold US";
   font-size: 12px;
   font-weight: 400;
@@ -149,7 +138,8 @@ export const FaqImage = styled.img`
     display: ${({ isOpen }) => (isOpen ? "block" : "none")};
     width: 148px;
     height: 183px;
-    transform: ${({ isOpen }) => (isOpen ? "rotate(-16deg)" : "none")};
+    transform: ${({ isOpen }) =>
+      isOpen ? "rotate(-16deg)" : "none"};
   }
 
   @media (min-width: ${SizeDev.DESK}) {

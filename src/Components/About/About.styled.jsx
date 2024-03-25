@@ -1,17 +1,14 @@
 import styled from "styled-components";
-
 import { ReactComponent as AboutSharp } from "../../Images/Svg/AboutSharp.svg";
 import { Colors, SizeDev } from "../styles/ConstantStyles";
 
 export const AboutSection = styled.section`
   position: relative;
-
   padding-top: 123px;
 
   @media (min-width: ${SizeDev.TAB}) {
     padding-top: 140px;
     padding-bottom: 36px;
-
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
@@ -26,13 +23,11 @@ export const AboutSection = styled.section`
 
 export const AboutTitle = styled.h2`
   margin-bottom: 16px;
-
   font-family: "Right Grotesk Compact";
   font-size: 40px;
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
-
   color: ${Colors.ColorWhite};
 
   span {
@@ -42,28 +37,24 @@ export const AboutTitle = styled.h2`
   @media (min-width: ${SizeDev.TAB}) {
     width: 269px;
     margin-bottom: 68px;
-
     font-size: 60px;
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     width: 538px;
     margin-bottom: 56px;
-
     font-size: 120px;
   }
 `;
 
 export const AboutTextOne = styled.p`
   margin-bottom: 36px;
-
   font-family: "Messina Sans Mono Regular";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.19;
   text-transform: uppercase;
   text-align: right;
-
   color: ${Colors.ColorWhite};
 
   @media (min-width: ${SizeDev.TAB}) {
@@ -74,7 +65,6 @@ export const AboutTextOne = styled.p`
 
   @media (min-width: ${SizeDev.DESK}) {
     width: 409px;
-
     font-size: 24px;
     line-height: 1.21;
   }
@@ -87,7 +77,6 @@ export const AboutTextTwo = styled.p`
   line-height: 1.17;
   text-transform: uppercase;
   text-align: center;
-
   color: ${Colors.ColorWhite};
 
   @media (min-width: ${SizeDev.TAB}) {
@@ -113,7 +102,6 @@ export const CrossIconStyled = styled(AboutSharp)`
 
 export const AboutCont = styled.div`
   margin-bottom: 40px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,13 +110,11 @@ export const AboutCont = styled.div`
   @media (min-width: ${SizeDev.TAB}) {
     width: 269px;
     margin-bottom: 0;
-
     gap: 24px;
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     width: 417px;
-
     gap: 36px;
   }
 `;
@@ -140,13 +126,11 @@ export const AboutImg = styled.img`
     position: absolute;
     right: 0;
     bottom: 0;
-
     width: 313px;
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     bottom: 0px;
-
     width: 492px;
   }
 `;
