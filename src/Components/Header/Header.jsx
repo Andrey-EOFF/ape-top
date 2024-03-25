@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <LinkLogo href="https://Andrey-EOFF.github.io/ape-top">
+      <LinkLogo href="*">
         <LogoStyle as={LogoSvg} />
       </LinkLogo>
 

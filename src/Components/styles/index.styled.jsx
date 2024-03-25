@@ -15,19 +15,18 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  padding: 0 8px;
-  padding-top: 54px;
+
   margin: 0 auto;
   width: 344px;
 
-  /* Tablet */
+
   @media screen and (min-width: ${SizeDev.TAB}) {
     width: ${SizeDev.TAB};
   }
 
-  /* Desktop */
+
   @media screen and (min-width: ${SizeDev.DESK}) {
     width: ${SizeDev.DESK_END};
-    padding-top: 16px;
+
   }
 `;
