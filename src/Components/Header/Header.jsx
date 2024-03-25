@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <LinkLogo href="*">
+      <LinkLogo to="/"> 
         <LogoStyle as={LogoSvg} />
       </LinkLogo>
 

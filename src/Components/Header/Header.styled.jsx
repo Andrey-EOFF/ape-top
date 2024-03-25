@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SizeDev, Colors, Utils } from "../styles/ConstantStyles";
+import { Link } from "react-router-dom";
 
 export const HeaderSection = styled.div`
   position: absolute;
@@ -53,7 +54,7 @@ export const LogoStyle = styled.svg`
   }
 `;
 
-export const LinkLogo = styled.a`
+export const LinkLogo = styled(Link)`
   width: 32px;
   height: 48px;
 
