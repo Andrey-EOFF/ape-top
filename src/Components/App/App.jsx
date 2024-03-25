@@ -15,11 +15,8 @@ const Footer = React.lazy(() => import("../Footer/Footer.jsx"));
 function App() {
   return (
     <>
-  
-        <Header />
-
-        <Hero />
-
+      <Header />
+      <Hero />
       <Suspense fallback={<div>Loading...</div>}>
         <Container>
           <About />
