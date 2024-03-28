@@ -2,11 +2,9 @@ import styled from "styled-components";
 import { SizeDev, Colors, Utils } from "../styles/ConstantStyles";
 
 export const HeroSection = styled.section`
-  position: relative;
+  position: absolute;
   top: 60px;
-  width: 216px;
-  margin-left: auto;
-  margin-right: auto;
+  left: 25%;
 
   display: flex;
   flex-direction: column;
@@ -14,6 +12,7 @@ export const HeroSection = styled.section`
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     width: 591px;
+    left: 12%;
     align-items: start;
   }
 
@@ -133,11 +132,11 @@ export const HeroImage = styled.img`
 `;
 
 export const HeroCont = styled.div`
-  position: relative;
-  top: -4px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
+  width: 217px;
 
   @media (min-width: ${SizeDev.TAB}) {
     top: -19px;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SizeDev, Colors, Utils } from "../styles/ConstantStyles";
 
 export const HeaderSection = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: space-between;
   min-width: 344px;
@@ -17,7 +17,6 @@ export const HeaderSection = styled.div`
     min-width: ${SizeDev.TAB};
     height: 421px;
     padding: 12px;
-    position: absolute;
   }
 
   @media screen and (min-width: ${SizeDev.DESK}) {
@@ -53,7 +52,7 @@ export const LogoStyle = styled.svg`
   }
 `;
 
-export const LinkLogo = styled.div`
+export const LinkLogo = styled.a`
   width: 32px;
   height: 48px;
 

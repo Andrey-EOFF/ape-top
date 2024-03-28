@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { SizeDev, Colors } from "./ConstantStyles";
+import { Colors } from "./ConstantStyles";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -17,16 +17,5 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
 
   margin: 0 auto;
-  width: 344px;
 
-
-  @media screen and (min-width: ${SizeDev.TAB}) {
-    width: ${SizeDev.TAB};
-  }
-
-
-  @media screen and (min-width: ${SizeDev.DESK}) {
-    width: ${SizeDev.DESK_END};
-
-  }
 `;

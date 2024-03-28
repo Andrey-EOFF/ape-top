@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   LogoStyle,
   NavLinkList,
@@ -13,30 +13,22 @@ import { ReactComponent as LogomarkSvg } from "../../Images/Svg/Logomark.svg";
 import { ReactComponent as TwiterSvg } from "../../Images/Svg/Twiter.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BtnMenu from "../Buttons/BtnMenu";
+import { useAppContext } from "../context";
+import Hero from "../Hero/Hero";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const { isMenuOpen } = useAppContext();
 
   return (
     <HeaderSection>
-      <LinkLogo > 
+      <LinkLogo href="https://andrey-eoff.github.io/ape-top/">
         <LogoStyle as={LogoSvg} />
       </LinkLogo>
 
-      {isMenuOpen && (
-        <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
-      )}
+      {isMenuOpen && <BurgerMenu />}
       <NavLinkList>
         <NavLinkItemMenu isMenuOpen={isMenuOpen}>
-          <BtnMenu
-            onClick={toggleMenu}
-            toggleMenu={toggleMenu}
-            isMenuOpen={isMenuOpen}
-          />
+          <BtnMenu />
         </NavLinkItemMenu>
 
         <NavLinkItem isMenuOpen={isMenuOpen}>
@@ -63,6 +55,7 @@ const Header = () => {
           </a>
         </NavLinkItem>
       </NavLinkList>
+      <Hero />
     </HeaderSection>
   );
 };

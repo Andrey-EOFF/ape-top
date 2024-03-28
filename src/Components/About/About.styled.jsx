@@ -4,11 +4,11 @@ import { Colors, SizeDev } from "../styles/ConstantStyles";
 
 export const AboutSection = styled.section`
   position: relative;
-  padding-top: 123px;
+  padding-top: 60px;
 
   @media (min-width: ${SizeDev.TAB}) {
-    padding-top: 140px;
     padding-bottom: 36px;
+    padding-top: 80px;
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
@@ -16,8 +16,8 @@ export const AboutSection = styled.section`
   }
 
   @media (min-width: ${SizeDev.DESK}) {
-    padding-top: 180px;
     padding-bottom: 40px;
+    padding-top: 120px;
   }
 `;
 
@@ -120,12 +120,12 @@ export const AboutCont = styled.div`
 `;
 
 export const AboutImg = styled.img`
-  width: 216px;
+  width: 100%;
 
   @media (min-width: ${SizeDev.TAB}) {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 313px;
   }
 

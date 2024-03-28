@@ -51,8 +51,7 @@ export const ArtsSlider = styled.div`
 
 export const ArtSlide = styled.img`
   flex: 0 0 auto;
-  width: 215px;
-  height: 256px;
+  width: 100%;
 
   @media (min-width: ${SizeDev.TAB}) {
     width: 284px;

@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import Header from "../Header/Header.jsx";
-import Hero from "../Hero/Hero.jsx";
 
 import "./App.styled.jsx";
 import { Container } from "./App.styled.jsx";
@@ -16,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+
       <Suspense fallback={<div>Loading...</div>}>
         <Container>
           <About />

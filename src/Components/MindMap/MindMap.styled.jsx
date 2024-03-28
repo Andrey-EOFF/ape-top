@@ -18,7 +18,6 @@ const cardSizes = {
   },
 };
 
-
 export const MindMapSection = styled.div`
   padding-top: 60px;
 
@@ -57,7 +56,7 @@ export const MindMapTitle = styled.h2`
   }
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
   gap: 20px;
@@ -76,7 +75,7 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Card = styled.li`
   position: relative;
   display: ${({ isActive }) => (isActive ? "flex" : "none")};
   flex-direction: column;
@@ -93,7 +92,7 @@ export const Card = styled.div`
     text-decoration: underline;
   }
 
-  width: ${cardSizes.mobile.width};
+  width: 100%;
   height: ${cardSizes.mobile.height};
 
   @media (min-width: ${SizeDev.TAB}) {
