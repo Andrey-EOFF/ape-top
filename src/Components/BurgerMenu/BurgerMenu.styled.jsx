@@ -13,13 +13,14 @@ export const BurgerMenuSection = styled.div`
 
   min-width: 344px;
   max-width: ${SizeDev.MOB_END};
-  height: 100%;
+  height: 100vh;
   padding: 8px;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
 
   background-color: ${Colors.BgColorMain};
 

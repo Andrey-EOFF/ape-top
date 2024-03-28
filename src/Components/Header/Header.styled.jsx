@@ -12,6 +12,7 @@ export const HeaderSection = styled.div`
   border-radius: 12px;
   margin: 0 auto;
   padding: 8px;
+  margin-top: 54px;
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     min-width: ${SizeDev.TAB};
