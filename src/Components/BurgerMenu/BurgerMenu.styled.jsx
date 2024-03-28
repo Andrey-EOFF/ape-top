@@ -38,12 +38,21 @@ export const BurgNav = styled.div`
   justify-content: space-between;
 `;
 
+export const BgBlock = styled.div`
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
 export const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   margin-top: 130px;
+
+  cursor: pointer;
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     position: absolute;

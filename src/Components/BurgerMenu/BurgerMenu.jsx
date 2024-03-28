@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  BgBlock,
   BurgNav,
   BurgerMenuSection,
   LogoStyle,
@@ -29,6 +30,7 @@ const BurgerMenu = () => {
           <LogoStyle as={LogoSvg} />
         </a>
       </BurgNav>
+      <BgBlock>
       <NavList>
         <NavItem>
           <Span onClick={() => scrollToSection("about")}>ABOUT</Span>
@@ -47,6 +49,7 @@ const BurgerMenu = () => {
         </NavItem>
       </NavList>
       <Footer isMenuOpen={isMenuOpen} />
+     </BgBlock>
     </BurgerMenuSection>
   );
 };
