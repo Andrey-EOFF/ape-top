@@ -14,7 +14,7 @@ import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
 
 const InWork = () => {
   return (
-    <InWorkSection>
+    <InWorkSection id="mint">
       <ContentWrapper>
         <Heading>Are you in?</Heading>
 

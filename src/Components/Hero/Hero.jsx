@@ -53,6 +53,13 @@ const Hero = () => {
       break;
   }
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <HeroSection>
       <HeroTextkOne>diD yOu seE iT ?</HeroTextkOne>
@@ -63,7 +70,9 @@ const Hero = () => {
       <HeroTextkTwo>Apes aRe eveRywhere</HeroTextkTwo>
       <HeroImage src={imgSrc} alt="monkey" />
       <HeroCont>
-        <HeroBtn type="button">Meet Apes</HeroBtn>
+        <HeroBtn type="button" onClick={() => scrollToSection("mint")}>
+          Meet Apes
+        </HeroBtn>
         <HeroTextThree>
           Yacht Ape is a collection of unique digital apes that you can own in
           NFT format
