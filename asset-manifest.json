@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ape-top/static/css/main.2e0f1011.css",
-    "main.js": "/ape-top/static/js/main.f0750b81.js",
+    "main.js": "/ape-top/static/js/main.5b410ceb.js",
     "static/js/453.c8eca3ca.chunk.js": "/ape-top/static/js/453.c8eca3ca.chunk.js",
     "static/js/558.b10c6008.chunk.js": "/ape-top/static/js/558.b10c6008.chunk.js",
     "static/js/968.916f729f.chunk.js": "/ape-top/static/js/968.916f729f.chunk.js",
@@ -35,14 +35,14 @@
     "static/media/MessinaSansMono-Bold.ttf": "/ape-top/static/media/MessinaSansMono-Bold.1f75a6d03c35769edef5.ttf",
     "static/media/MessinaSansMono-Black.ttf": "/ape-top/static/media/MessinaSansMono-Black.415e3ceac622bc0166b2.ttf",
     "static/media/Logo.svg": "/ape-top/static/media/Logo.309d89a14b17c2be616c700730b33bda.svg",
-    "static/media/Logomark.svg": "/ape-top/static/media/Logomark.cccaa52326db40c900f96459d139cb36.svg",
+    "static/media/Logomark.svg": "/ape-top/static/media/Logomark.90f8ca69a5b892a091f5464c9b3ac0d2.svg",
     "static/media/Discord.svg": "/ape-top/static/media/Discord.2f5424488f895b03e38da5699b366b46.svg",
     "index.html": "/ape-top/index.html",
     "static/media/Twiter.svg": "/ape-top/static/media/Twiter.cf4c942154a7be86697d2c1e019878ff.svg",
     "static/media/AboutSharp.svg": "/ape-top/static/media/AboutSharp.a0f01b5b2ac6dae7b43e6e1b641db94f.svg",
     "static/media/mind-arrow.svg": "/ape-top/static/media/mind-arrow.c5a37981f6c4274bbd7eaba2cbe458d6.svg",
     "main.2e0f1011.css.map": "/ape-top/static/css/main.2e0f1011.css.map",
-    "main.f0750b81.js.map": "/ape-top/static/js/main.f0750b81.js.map",
+    "main.5b410ceb.js.map": "/ape-top/static/js/main.5b410ceb.js.map",
     "453.c8eca3ca.chunk.js.map": "/ape-top/static/js/453.c8eca3ca.chunk.js.map",
     "558.b10c6008.chunk.js.map": "/ape-top/static/js/558.b10c6008.chunk.js.map",
     "968.916f729f.chunk.js.map": "/ape-top/static/js/968.916f729f.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.2e0f1011.css",
-    "static/js/main.f0750b81.js"
+    "static/js/main.5b410ceb.js"
   ]
 }
