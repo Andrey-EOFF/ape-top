@@ -17,16 +17,11 @@ export const FooterSection = styled.div`
     padding-top: 80px;
     padding-bottom: 40px;
 
-    display: ${({ isMenuOpen }) => (isMenuOpen ? "block" : "none")};
   }
 
   @media (min-width: ${SizeDev.DESK}) {
     padding-top: 120px;
-    padding-bottom: 24px;
-
-    font-family: Messina Sans Mono;
     font-size: 16px;
-
     line-height: 1.19;
   }
 `;

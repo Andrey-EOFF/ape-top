@@ -13,7 +13,9 @@ import Footer from "../Footer/Footer";
 import { useAppContext } from "../context";
 
 const BurgerMenu = () => {
-  const { isMenuOpen, toggleMenu } = useAppContext();
+  const { toggleMenu } = useAppContext();
+
+  const isWindowLarge = window.innerWidth <= 767;
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -24,6 +26,8 @@ const BurgerMenu = () => {
   };
 
   return (
+
+    
     <BurgerMenuSection>
       <BurgNav>
         <a href="/">
@@ -48,7 +52,7 @@ const BurgerMenu = () => {
           <Span onClick={() => scrollToSection("mint")}>MINT</Span>
         </NavItem>
       </NavList>
-      <Footer isMenuOpen={isMenuOpen} />
+      {isWindowLarge && <Footer />}
      </BgBlock>
     </BurgerMenuSection>
   );
