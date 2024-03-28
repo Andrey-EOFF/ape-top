@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BurgNav,
   BurgerMenuSection,
@@ -9,21 +9,10 @@ import {
 } from "./BurgerMenu.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
 import Footer from "../Footer/Footer";
+import { useAppContext } from "../context";
 
-const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && isMenuOpen) {
-        toggleMenu();
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isMenuOpen, toggleMenu]);
+const BurgerMenu = () => {
+  const { isMenuOpen, toggleMenu } = useAppContext();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -54,7 +43,7 @@ const BurgerMenu = ({ toggleMenu, isMenuOpen }) => {
           <Span onClick={() => scrollToSection("arts")}>ARTS</Span>
         </NavItem>
         <NavItem>
-          <Span onClick={() => scrollToSection("arts")}>MINT</Span>
+          <Span onClick={() => scrollToSection("mint")}>MINT</Span>
         </NavItem>
       </NavList>
       <Footer isMenuOpen={isMenuOpen} />
