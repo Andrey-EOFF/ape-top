@@ -32,12 +32,6 @@ export const BurgerMenuSection = styled.div`
   }
 `;
 
-export const BurgNav = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-`;
-
 export const BgBlock = styled.div`
   display: flex;
   height: 100vh;
@@ -57,7 +51,7 @@ export const NavList = styled.ul`
   @media screen and (min-width: ${SizeDev.TAB}) {
     position: absolute;
 
-    width: 270px;
+    width: 245px;
     height: 48px;
     margin: 0;
 
@@ -73,7 +67,7 @@ export const NavList = styled.ul`
     background-color: ${Colors.BgHeroBtn};
 
     @media screen and (min-width: ${SizeDev.DESK}) {
-      width: 430px;
+      width: 460px;
       height: 80px;
 
       right: -304px;
@@ -125,34 +119,5 @@ export const Span = styled.span`
     font-weight: 600;
     line-height: 1.18;
     color: ${Colors.ColorBlack};
-  }
-`;
-
-export const LogoStyle = styled.svg`
-  display: block;
-  width: 48px;
-  height: 32px;
-
-  margin-top: 8px;
-  cursor: pointer;
-
-  path {
-    fill: ${Colors.ColorWhite};
-  }
-
-  &:hover {
-    path {
-      fill: ${Colors.ColorAkcent};
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
-
-export const BtnBrMenu = styled.button`
-  @media screen and (min-width: 768px) {
-    display: none;
   }
 `;
