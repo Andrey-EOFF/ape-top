@@ -84,5 +84,10 @@ export const PrevNextButtons = styled.div`
     text-align: center;
 
     cursor: pointer;
+
+    &:hover {
+      color: ${Colors.ColorAkcent};
+      transform: scale(1.15);
+    }
   }
 `;

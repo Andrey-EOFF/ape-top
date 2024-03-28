@@ -4,6 +4,7 @@ import Header from "../Header/Header.jsx";
 import "./App.styled.jsx";
 import { Container } from "./App.styled.jsx";
 import RunningLine from "../RunningLine/RunningLine.jsx";
+import InWork from "../InWork/InWork.jsx";
 
 const About = React.lazy(() => import("../About/About.jsx"));
 const MindMap = React.lazy(() => import("../MindMap/MindMap.jsx"));
@@ -25,6 +26,7 @@ function App() {
           <MindMap />
           <Faq />
           <Arts />
+          <InWork />
           <Footer />
         </Container>
       </Suspense>

@@ -28,13 +28,19 @@ export const LogoStyle = styled.svg`
 
   &:hover {
     path {
-      fill: ${Colors.ColorWhite};
+      fill:${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
     }
   }
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     path {
       fill: ${Colors.ColorBlack};
+    }
+    &:hover {
+      path {
+        fill: ${Colors.ColorWhite};
+      }
     }
   }
 

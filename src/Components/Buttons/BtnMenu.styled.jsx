@@ -17,16 +17,19 @@ export const MenuButton = styled.button`
   text-decoration: none;
   appearance: none;
   border: none;
-
+  cursor: pointer;
   transition: ${Utils.transition};
+
   background-color: ${({ isMenuOpen }) =>
     isMenuOpen ? Colors.BgBtMenuOpen : Colors.BgBtMenu};
 
   color: ${({ isMenuOpen }) =>
     isMenuOpen ? Colors.ColorWhite : Colors.ColorBlack};
 
-  cursor: pointer;
-  transition: ${Utils.transition};
+  &:hover {
+    color: ${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
+  }
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     color: ${Colors.ColorBlack};
@@ -35,6 +38,10 @@ export const MenuButton = styled.button`
     border-top-left-radius: ${({ isMenuOpen }) => (isMenuOpen ? "0" : "12px")};
     border-bottom-left-radius: ${({ isMenuOpen }) =>
       isMenuOpen ? "0" : "12px"};
+
+    &:hover {
+      color: ${Colors.ColorWhite};
+    }
   }
 
   @media screen and (min-width: ${SizeDev.DESK}) {
@@ -51,8 +58,16 @@ export const Span = styled.span`
   transition: ${Utils.transition};
 
   &:hover {
-    border-bottom: 2px solid ${Colors.ColorWhite};
+    border-bottom: 2px solid
+      ${(props) => (props.isMenuOpen ? Colors.Akcent : Colors.ColorWhite)};
     padding-bottom: 2px;
-    color: ${Colors.ColorWhite};
+    color: ${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.Akcent : Colors.ColorWhite};
+  }
+
+  @media screen and (min-width: ${SizeDev.TAB}) {
+    &:hover {
+      color: ${Colors.ColorWhite};
+    }
   }
 `;

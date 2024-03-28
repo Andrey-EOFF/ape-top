@@ -98,13 +98,14 @@ export const Span = styled.span`
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
-  transition: border-bottom 0.3s ease;
-  transition: ${Utils.transition};
+  transition: border-bottom 0.3s ease, color ${Utils.transition};
 
   &:hover {
-    border-bottom: 2px solid ${Colors.ColorWhite};
+    border-bottom: 2px solid
+      ${(isMenuOpen) => (isMenuOpen ? Colors.Akcent : Colors.ColorWhite)};
     padding-bottom: 2px;
-    color: ${Colors.ColorWhite};
+    color: ${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
   }
 
   @media screen and (min-width: ${SizeDev.TAB}) {
@@ -112,6 +113,10 @@ export const Span = styled.span`
     font-weight: 600;
     line-height: 1.17;
     color: ${Colors.ColorBlack};
+
+    &:hover {
+      color: ${Colors.ColorWhite};
+    }
   }
 
   @media screen and (min-width: ${SizeDev.DESK}) {

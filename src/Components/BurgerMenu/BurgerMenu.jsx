@@ -11,7 +11,7 @@ import { useAppContext } from "../context";
 import HeaderMain from "../HeaderMain/HeaderMain";
 
 const BurgerMenu = () => {
-  const { toggleMenu } = useAppContext();
+  const { toggleMenu, isMenuOpen } = useAppContext();
 
   const isWindowLarge = window.innerWidth <= 767;
 
@@ -28,20 +28,20 @@ const BurgerMenu = () => {
       {isWindowLarge && <HeaderMain />}
       <BgBlock>
         <NavList>
-          <NavItem>
-            <Span onClick={() => scrollToSection("about")}>ABOUT</Span>
+          <NavItem onClick={() => scrollToSection("about")}>
+            <Span isMenuOpen={isMenuOpen}>ABOUT</Span>
           </NavItem>
-          <NavItem>
-            <Span onClick={() => scrollToSection("mindmap")}>M-MAP</Span>
+          <NavItem onClick={() => scrollToSection("mindmap")}>
+            <Span isMenuOpen={isMenuOpen}>M-MAP</Span>
           </NavItem>
-          <NavItem>
-            <Span onClick={() => scrollToSection("faq")}>FAQ</Span>
+          <NavItem onClick={() => scrollToSection("faq")}>
+            <Span isMenuOpen={isMenuOpen}>FAQ</Span>
           </NavItem>
-          <NavItem>
-            <Span onClick={() => scrollToSection("arts")}>ARTS</Span>
+          <NavItem onClick={() => scrollToSection("arts")}>
+            <Span isMenuOpen={isMenuOpen}>ARTS</Span>
           </NavItem>
-          <NavItem>
-            <Span onClick={() => scrollToSection("mint")}>MINT</Span>
+          <NavItem onClick={() => scrollToSection("mint")}>
+            <Span isMenuOpen={isMenuOpen}>MINT</Span>
           </NavItem>
         </NavList>
         {isWindowLarge && <Footer />}

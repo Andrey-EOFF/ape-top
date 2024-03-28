@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev } from "../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
 import { ReactComponent as MindSvg } from "../../Images/Svg/mind-arrow.svg";
 
@@ -183,8 +183,13 @@ export const PrevNextButtons = styled.div`
     font-weight: 400;
     line-height: 1;
     text-align: center;
-
+    transition: ${Utils.transition};
     cursor: pointer;
+
+    &:hover {
+      color: ${Colors.ColorAkcent};
+      transform: scale(1.15);
+    }
   }
 
   @media (min-width: ${SizeDev.TAB}) {

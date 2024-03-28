@@ -20,24 +20,31 @@ export const NavLinkItem = styled.li`
   display: flex;
   z-index: 100;
   justify-content: center;
-  align-items: center;
   border-radius: 10px;
+  cursor: pointer;
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
   background-color: ${({ isMenuOpen }) =>
     isMenuOpen ? Colors.BgBtMenuOpen : Colors.BgBtMenu};
 
   path {
     fill: ${({ isMenuOpen }) =>
       isMenuOpen ? Colors.ColorWhite : Colors.ColorBlack};
+    transition: ${Utils.transition};
   }
 
-  transition: ${Utils.transition};
-
   &:hover {
-    background-color: ${({ isMenuOpen }) =>
-      isMenuOpen ? Colors.BgBtMenuOpenHover : Colors.BgBtMenuHover};
-
     path {
-      fill: ${Colors.ColorWhite};
+      fill: ${({ isMenuOpen }) =>
+        isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
     }
   }
 
@@ -46,6 +53,11 @@ export const NavLinkItem = styled.li`
 
     path {
       fill: ${Colors.ColorBlack};
+    }
+    &:hover {
+      path {
+        fill: ${Colors.ColorWhite};
+      }
     }
   }
 
