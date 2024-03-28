@@ -16,7 +16,6 @@ export const FooterSection = styled.div`
   @media (min-width: ${SizeDev.TAB}) {
     padding-top: 80px;
     padding-bottom: 40px;
-
   }
 
   @media (min-width: ${SizeDev.DESK}) {
