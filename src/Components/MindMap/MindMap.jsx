@@ -55,19 +55,17 @@ const MindMap = () => {
       <MindMapTitle>MindMap</MindMapTitle>
       <CardContainer>
         {MIND_MAP_DATA.map((item, index) => (
-          <Card
-            key={index}
-            style={{ backgroundColor: item.bgColor }}
-            isActive={index === currentIndex}
-          >
-            <CardText>{item.text}</CardText>
-            <CardTitle>{item.title}</CardTitle>
-            {item.icon && (
-              <a href={item.url} key={index}>
-                <MindArrow />
-              </a>
-            )}
-          </Card>
+          <a href={item.url} key={index}>
+            <Card
+              key={index}
+              style={{ backgroundColor: item.bgColor }}
+              isActive={index === currentIndex}
+            >
+              <CardText>{item.text}</CardText>
+              <CardTitle>{item.title}</CardTitle>
+              {item.icon && <MindArrow />}
+            </Card>
+          </a>
         ))}
       </CardContainer>
       <PrevNextButtons>

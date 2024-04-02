@@ -4,12 +4,12 @@ import Header from "../Header/Header.jsx";
 import "./App.styled.jsx";
 import { Container } from "./App.styled.jsx";
 import RunningLine from "../RunningLine/RunningLine.jsx";
-import InWork from "../InWork/InWork.jsx";
 
 const About = React.lazy(() => import("../About/About.jsx"));
 const MindMap = React.lazy(() => import("../MindMap/MindMap.jsx"));
 const Faq = React.lazy(() => import("../Faq/Faq.jsx"));
 const Arts = React.lazy(() => import("../Arts/Arts.jsx"));
+const Mint = React.lazy(() => import("../Mint/Mint.jsx"));
 const Footer = React.lazy(() => import("../Footer/Footer.jsx"));
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <MindMap />
           <Faq />
           <Arts />
-          <InWork />
+          <Mint />
           <Footer />
         </Container>
       </Suspense>

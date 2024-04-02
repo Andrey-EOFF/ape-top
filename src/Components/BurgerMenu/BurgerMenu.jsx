@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BgBlock,
   BurgerMenuSection,
@@ -13,7 +13,7 @@ import HeaderMain from "../HeaderMain/HeaderMain";
 const BurgerMenu = () => {
   const { toggleMenu, isMenuOpen } = useAppContext();
 
-  const isWindowLarge = window.innerWidth <= 767;
+  const isWindowLarge = window.innerWidth <= 768;
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -22,6 +22,20 @@ const BurgerMenu = () => {
       toggleMenu();
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isMenuOpen) {
+        toggleMenu();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen, toggleMenu]);
 
   return (
     <BurgerMenuSection>

@@ -59,12 +59,11 @@ export const MindMapTitle = styled.h2`
 export const CardContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
-  gap: 20px;
 
   @media (max-width: ${SizeDev.TAB}) {
     overflow-x: scroll;
-    display: flex;
     flex-wrap: nowrap;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -72,6 +71,7 @@ export const CardContainer = styled.ul`
 
   @media (min-width: ${SizeDev.TAB}) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 `;
 
@@ -80,6 +80,7 @@ export const Card = styled.li`
   display: ${({ isActive }) => (isActive ? "flex" : "none")};
   flex-direction: column;
   justify-content: space-between;
+
   padding: 24px 12px;
   border-radius: 10px;
   color: ${Colors.ColorWhite};
