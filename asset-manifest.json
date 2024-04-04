@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/ape-top/static/css/main.2e0f1011.css",
-    "main.js": "/ape-top/static/js/main.6e0acbdb.js",
+    "main.js": "/ape-top/static/js/main.5a95eb61.js",
     "static/js/453.a3d2b329.chunk.js": "/ape-top/static/js/453.a3d2b329.chunk.js",
-    "static/js/558.341bd194.chunk.js": "/ape-top/static/js/558.341bd194.chunk.js",
-    "static/js/968.b5171e61.chunk.js": "/ape-top/static/js/968.b5171e61.chunk.js",
-    "static/js/802.e99d3144.chunk.js": "/ape-top/static/js/802.e99d3144.chunk.js",
-    "static/js/654.1ee8c32d.chunk.js": "/ape-top/static/js/654.1ee8c32d.chunk.js",
-    "static/js/673.74b5f72e.chunk.js": "/ape-top/static/js/673.74b5f72e.chunk.js",
+    "static/js/48.001c6efc.chunk.js": "/ape-top/static/js/48.001c6efc.chunk.js",
+    "static/js/558.0c50db77.chunk.js": "/ape-top/static/js/558.0c50db77.chunk.js",
+    "static/js/968.065b3972.chunk.js": "/ape-top/static/js/968.065b3972.chunk.js",
+    "static/js/802.c650855d.chunk.js": "/ape-top/static/js/802.c650855d.chunk.js",
+    "static/js/654.9217671f.chunk.js": "/ape-top/static/js/654.9217671f.chunk.js",
+    "static/js/673.c33f58a2.chunk.js": "/ape-top/static/js/673.c33f58a2.chunk.js",
+    "static/js/908.d869c1f2.chunk.js": "/ape-top/static/js/908.d869c1f2.chunk.js",
     "static/js/892.62486dae.chunk.js": "/ape-top/static/js/892.62486dae.chunk.js",
     "static/media/BiroScriptPlus-Sloppy.ttf": "/ape-top/static/media/BiroScriptPlus-Sloppy.87e5355ce830b7f955b4.ttf",
     "static/media/BiroScriptPlus-Bold.ttf": "/ape-top/static/media/BiroScriptPlus-Bold.d59732f3d22e3d024577.ttf",
@@ -45,17 +47,19 @@
     "static/media/AboutSharp.svg": "/ape-top/static/media/AboutSharp.a0f01b5b2ac6dae7b43e6e1b641db94f.svg",
     "static/media/mind-arrow.svg": "/ape-top/static/media/mind-arrow.c5a37981f6c4274bbd7eaba2cbe458d6.svg",
     "main.2e0f1011.css.map": "/ape-top/static/css/main.2e0f1011.css.map",
-    "main.6e0acbdb.js.map": "/ape-top/static/js/main.6e0acbdb.js.map",
+    "main.5a95eb61.js.map": "/ape-top/static/js/main.5a95eb61.js.map",
     "453.a3d2b329.chunk.js.map": "/ape-top/static/js/453.a3d2b329.chunk.js.map",
-    "558.341bd194.chunk.js.map": "/ape-top/static/js/558.341bd194.chunk.js.map",
-    "968.b5171e61.chunk.js.map": "/ape-top/static/js/968.b5171e61.chunk.js.map",
-    "802.e99d3144.chunk.js.map": "/ape-top/static/js/802.e99d3144.chunk.js.map",
-    "654.1ee8c32d.chunk.js.map": "/ape-top/static/js/654.1ee8c32d.chunk.js.map",
-    "673.74b5f72e.chunk.js.map": "/ape-top/static/js/673.74b5f72e.chunk.js.map",
+    "48.001c6efc.chunk.js.map": "/ape-top/static/js/48.001c6efc.chunk.js.map",
+    "558.0c50db77.chunk.js.map": "/ape-top/static/js/558.0c50db77.chunk.js.map",
+    "968.065b3972.chunk.js.map": "/ape-top/static/js/968.065b3972.chunk.js.map",
+    "802.c650855d.chunk.js.map": "/ape-top/static/js/802.c650855d.chunk.js.map",
+    "654.9217671f.chunk.js.map": "/ape-top/static/js/654.9217671f.chunk.js.map",
+    "673.c33f58a2.chunk.js.map": "/ape-top/static/js/673.c33f58a2.chunk.js.map",
+    "908.d869c1f2.chunk.js.map": "/ape-top/static/js/908.d869c1f2.chunk.js.map",
     "892.62486dae.chunk.js.map": "/ape-top/static/js/892.62486dae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e0f1011.css",
-    "static/js/main.6e0acbdb.js"
+    "static/js/main.5a95eb61.js"
   ]
 }
