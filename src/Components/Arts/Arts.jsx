@@ -8,6 +8,7 @@ import {
   ArtTitle,
 } from "./Arts.styled";
 import { ArtSlides } from "../Data/ArtsData";
+import { Container } from "../App/App.styled";
 
 const Arts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,41 +58,43 @@ const Arts = () => {
   }, []);
 
   return (
-    <ArtsSection
-      id="arts"
-      {...swipeHandlers}
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-    >
-      <ArtTitle>COLLECTION</ArtTitle>
-      <ArtsSlider>
-        {ArtSlides.map((slide, index) => (
-          <ArtSlide
-            key={index}
-            src={slide}
-            alt={`Art ${index}`}
-            aria-hidden={index !== currentSlide}
-            style={{
-              display:
-                index >= currentSlide && index < currentSlide + slidesPerPage
-                  ? "block"
-                  : "none",
-            }}
-          />
-        ))}
-      </ArtsSlider>
-      <PrevNextButtons>
-        <button onClick={handlePrev} disabled={currentSlide === 0}>
-          Prev
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={currentSlide === totalSlides - slidesPerPage}
-        >
-          Next
-        </button>
-      </PrevNextButtons>
-    </ArtsSection>
+    <Container>
+      <ArtsSection
+        id="arts"
+        {...swipeHandlers}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+      >
+        <ArtTitle>COLLECTION</ArtTitle>
+        <ArtsSlider>
+          {ArtSlides.map((slide, index) => (
+            <ArtSlide
+              key={index}
+              src={slide}
+              alt={`Art ${index}`}
+              aria-hidden={index !== currentSlide}
+              style={{
+                display:
+                  index >= currentSlide && index < currentSlide + slidesPerPage
+                    ? "block"
+                    : "none",
+              }}
+            />
+          ))}
+        </ArtsSlider>
+        <PrevNextButtons>
+          <button onClick={handlePrev} disabled={currentSlide === 0}>
+            Prev
+          </button>
+          <button
+            onClick={handleNext}
+            disabled={currentSlide === totalSlides - slidesPerPage}
+          >
+            Next
+          </button>
+        </PrevNextButtons>
+      </ArtsSection>
+    </Container>
   );
 };
 

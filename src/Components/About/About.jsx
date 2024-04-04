@@ -12,6 +12,7 @@ import {
   AboutTitle,
   CrossIconStyled,
 } from "./About.styled";
+import { Container } from "../App/App.styled";
 
 const About = () => {
   const [screenSize, setScreenSize] = useState("");
@@ -54,7 +55,8 @@ const About = () => {
   }
 
   return (
-    <AboutSection id="about">
+    <Container>
+      <AboutSection id="about">
       <AboutTitle>
         a Story that started with <span>one simple ape</span>
       </AboutTitle>
@@ -73,6 +75,7 @@ const About = () => {
       </AboutCont>
       <AboutImg src={imgSrc} alt="nft-monkey" />
     </AboutSection>
+    </Container>
   );
 };
 

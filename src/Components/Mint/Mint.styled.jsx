@@ -5,7 +5,7 @@ import { ReactComponent as MetaMaskForm } from "../../Images/Svg/metaMask_form.s
 import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 import { ErrorMessage, Field, Form } from "formik";
 
-export const InWorkSection = styled.div`
+export const InWorkSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;

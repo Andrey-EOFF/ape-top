@@ -17,6 +17,7 @@ import {
 } from "./Mint.styled";
 
 import { Formik } from "formik";
+import { Container } from "../App/App.styled";
 
 const Mint = () => {
   const [buttonText, setButtonText] = useState("MINT");
@@ -38,72 +39,74 @@ const Mint = () => {
   };
 
   return (
-    <InWorkSection id="mint">
-      <ContentWrapper>
-        <Heading>Are you in?</Heading>
+    <Container>
+      <InWorkSection id="mint">
+        <ContentWrapper>
+          <Heading>Are you in?</Heading>
 
-        <MainText>
-          Join the YACHT APE community to be one of the first to receive our
-          limited edition NFT
-        </MainText>
+          <MainText>
+            Join the YACHT APE community to be one of the first to receive our
+            limited edition NFT
+          </MainText>
 
-        <CrossIconStyled />
+          <CrossIconStyled />
 
-        <Formik
-          initialValues={{ username: "", walletAddress: "" }}
-          onSubmit={handleFormSubmit}
-          validate={(values) => {
-            const errors = {};
+          <Formik
+            initialValues={{ username: "", walletAddress: "" }}
+            onSubmit={handleFormSubmit}
+            validate={(values) => {
+              const errors = {};
 
-            if (!values.username) {
-              errors.username = "WRONG DISCORD";
-            }
-            if (!values.walletAddress) {
-              errors.walletAddress = "WRONG ADDRESS";
-            }
+              if (!values.username) {
+                errors.username = "WRONG DISCORD";
+              }
+              if (!values.walletAddress) {
+                errors.walletAddress = "WRONG ADDRESS";
+              }
 
-            return errors;
-          }}
-        >
-          {({ handleSubmit }) => (
-            <FormBlock onSubmit={handleSubmit}>
-              <BoxField>
-                <FormBlockField>
-                  <FormFieldSvg>
-                    <StyledDiskForm />
-                  </FormFieldSvg>
+              return errors;
+            }}
+          >
+            {({ handleSubmit }) => (
+              <FormBlock onSubmit={handleSubmit}>
+                <BoxField>
+                  <FormBlockField>
+                    <FormFieldSvg>
+                      <StyledDiskForm />
+                    </FormFieldSvg>
 
-                  <StyledField
-                    name="username"
-                    type="text"
-                    placeholder="@USERNAME"
-                  />
-                  <ErrorMessageField name="username" component="p" />
-                </FormBlockField>
-              </BoxField>
+                    <StyledField
+                      name="username"
+                      type="text"
+                      placeholder="@USERNAME"
+                    />
+                    <ErrorMessageField name="username" component="p" />
+                  </FormBlockField>
+                </BoxField>
 
-              <BoxField>
-                <FormBlockField>
-                  <FormFieldSvg>
-                    <StyledMetaForm />
-                  </FormFieldSvg>
+                <BoxField>
+                  <FormBlockField>
+                    <FormFieldSvg>
+                      <StyledMetaForm />
+                    </FormFieldSvg>
 
-                  <StyledField
-                    name="walletAddress"
-                    type="text"
-                    placeholder="Wallet Address"
-                  />
+                    <StyledField
+                      name="walletAddress"
+                      type="text"
+                      placeholder="Wallet Address"
+                    />
 
-                  <ErrorMessageField name="walletAddress" component="p" />
-                </FormBlockField>
-              </BoxField>
+                    <ErrorMessageField name="walletAddress" component="p" />
+                  </FormBlockField>
+                </BoxField>
 
-              <StyledButton type="submit">{buttonText}</StyledButton>
-            </FormBlock>
-          )}
-        </Formik>
-      </ContentWrapper>
-    </InWorkSection>
+                <StyledButton type="submit">{buttonText}</StyledButton>
+              </FormBlock>
+            )}
+          </Formik>
+        </ContentWrapper>
+      </InWorkSection>
+    </Container>
   );
 };
 

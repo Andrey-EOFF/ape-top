@@ -18,7 +18,7 @@ const cardSizes = {
   },
 };
 
-export const MindMapSection = styled.div`
+export const MindMapSection = styled.section`
   padding-top: 60px;
 
   @media (min-width: ${SizeDev.TAB}) {

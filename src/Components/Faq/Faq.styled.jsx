@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
-export const FaqSection = styled.div`
+export const FaqSection = styled.section`
   padding-top: 60px;
 
   @media (min-width: ${SizeDev.TAB}) {

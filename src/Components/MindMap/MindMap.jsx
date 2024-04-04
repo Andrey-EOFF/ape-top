@@ -11,6 +11,7 @@ import {
   PrevNextButtons,
 } from "./MindMap.styled";
 import { useSwipeable } from "react-swipeable";
+import { Container } from "../App/App.styled";
 
 const MindMap = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,35 +52,37 @@ const MindMap = () => {
   }, [handleNext, handlePrev]);
 
   return (
-    <MindMapSection id="mindmap" {...handlers}>
-      <MindMapTitle>MindMap</MindMapTitle>
-      <CardContainer>
-        {MIND_MAP_DATA.map((item, index) => (
-          <a href={item.url} key={index}>
-            <Card
-              key={index}
-              style={{ backgroundColor: item.bgColor }}
-              isActive={index === currentIndex}
-            >
-              <CardText>{item.text}</CardText>
-              <CardTitle>{item.title}</CardTitle>
-              {item.icon && <MindArrow />}
-            </Card>
-          </a>
-        ))}
-      </CardContainer>
-      <PrevNextButtons>
-        <button onClick={handlePrev} disabled={currentIndex === 0}>
-          Prev
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={currentIndex === MIND_MAP_DATA.length - 1}
-        >
-          Next
-        </button>
-      </PrevNextButtons>
-    </MindMapSection>
+    <Container>
+      <MindMapSection id="mindmap" {...handlers}>
+        <MindMapTitle>MindMap</MindMapTitle>
+        <CardContainer>
+          {MIND_MAP_DATA.map((item, index) => (
+            <a href={item.url} key={index}>
+              <Card
+                key={index}
+                style={{ backgroundColor: item.bgColor }}
+                isActive={index === currentIndex}
+              >
+                <CardText>{item.text}</CardText>
+                <CardTitle>{item.title}</CardTitle>
+                {item.icon && <MindArrow />}
+              </Card>
+            </a>
+          ))}
+        </CardContainer>
+        <PrevNextButtons>
+          <button onClick={handlePrev} disabled={currentIndex === 0}>
+            Prev
+          </button>
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === MIND_MAP_DATA.length - 1}
+          >
+            Next
+          </button>
+        </PrevNextButtons>
+      </MindMapSection>
+    </Container>
   );
 };
 

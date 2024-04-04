@@ -15,6 +15,7 @@ import FaqImg1 from "../../Images/Png/faq1.png";
 import FaqImg2 from "../../Images/Png/faq2.png";
 import FaqImg3 from "../../Images/Png/faq3.png";
 import FaqImg4 from "../../Images/Png/faq4.png";
+import { Container } from "../App/App.styled";
 
 const Faq = () => {
   const [openId, setOpenId] = useState(FAQ_DATA[0].id);
@@ -24,17 +25,19 @@ const Faq = () => {
   };
 
   return (
-    <FaqSection>
-      <FaqTitle>FAQ</FaqTitle>
-      {FAQ_DATA.map((item) => (
-        <FaqItem
-          key={item.id}
-          item={item}
-          isOpen={item.id === openId}
-          onClick={() => handleToggle(item.id)}
-        />
-      ))}
-    </FaqSection>
+    <Container>
+      <FaqSection>
+        <FaqTitle>FAQ</FaqTitle>
+        {FAQ_DATA.map((item) => (
+          <FaqItem
+            key={item.id}
+            item={item}
+            isOpen={item.id === openId}
+            onClick={() => handleToggle(item.id)}
+          />
+        ))}
+      </FaqSection>
+    </Container>
   );
 };
 
