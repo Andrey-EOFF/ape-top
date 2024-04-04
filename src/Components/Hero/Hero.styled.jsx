@@ -4,8 +4,8 @@ import { SizeDev, Colors, Utils } from "../styles/ConstantStyles";
 export const HeroSection = styled.section`
   position: absolute;
   top: 60px;
-  left: 25%;
-
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,7 @@ export const HeroSection = styled.section`
     width: 591px;
     left: 12%;
     align-items: start;
+    transform: none;
   }
 
   @media (min-width: ${SizeDev.DESK}) {
