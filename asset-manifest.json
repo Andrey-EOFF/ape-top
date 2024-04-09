@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ape-top/static/css/main.2e0f1011.css",
-    "main.js": "/ape-top/static/js/main.a711d3bd.js",
+    "main.js": "/ape-top/static/js/main.e9d53246.js",
     "static/js/453.a3d2b329.chunk.js": "/ape-top/static/js/453.a3d2b329.chunk.js",
-    "static/js/48.1ca3ccce.chunk.js": "/ape-top/static/js/48.1ca3ccce.chunk.js",
+    "static/js/381.5d42b29e.chunk.js": "/ape-top/static/js/381.5d42b29e.chunk.js",
     "static/js/558.0c50db77.chunk.js": "/ape-top/static/js/558.0c50db77.chunk.js",
     "static/js/968.065b3972.chunk.js": "/ape-top/static/js/968.065b3972.chunk.js",
     "static/js/802.c650855d.chunk.js": "/ape-top/static/js/802.c650855d.chunk.js",
@@ -40,6 +40,7 @@
     "static/media/MessinaSansMono-Black.ttf": "/ape-top/static/media/MessinaSansMono-Black.415e3ceac622bc0166b2.ttf",
     "static/media/Logo.svg": "/ape-top/static/media/Logo.309d89a14b17c2be616c700730b33bda.svg",
     "static/media/metaMask_form.svg": "/ape-top/static/media/metaMask_form.1e1318ed1d79874e18f31e148cd282c9.svg",
+    "static/media/opensea_logo_icon.svg": "/ape-top/static/media/opensea_logo_icon.fc411618192080e250650da568ed5d74.svg",
     "static/media/discordForm.svg": "/ape-top/static/media/discordForm.7d6b920863b971801cacad7bf38f60b7.svg",
     "static/media/Discord.svg": "/ape-top/static/media/Discord.2f5424488f895b03e38da5699b366b46.svg",
     "index.html": "/ape-top/index.html",
@@ -47,9 +48,9 @@
     "static/media/AboutSharp.svg": "/ape-top/static/media/AboutSharp.a0f01b5b2ac6dae7b43e6e1b641db94f.svg",
     "static/media/mind-arrow.svg": "/ape-top/static/media/mind-arrow.c5a37981f6c4274bbd7eaba2cbe458d6.svg",
     "main.2e0f1011.css.map": "/ape-top/static/css/main.2e0f1011.css.map",
-    "main.a711d3bd.js.map": "/ape-top/static/js/main.a711d3bd.js.map",
+    "main.e9d53246.js.map": "/ape-top/static/js/main.e9d53246.js.map",
     "453.a3d2b329.chunk.js.map": "/ape-top/static/js/453.a3d2b329.chunk.js.map",
-    "48.1ca3ccce.chunk.js.map": "/ape-top/static/js/48.1ca3ccce.chunk.js.map",
+    "381.5d42b29e.chunk.js.map": "/ape-top/static/js/381.5d42b29e.chunk.js.map",
     "558.0c50db77.chunk.js.map": "/ape-top/static/js/558.0c50db77.chunk.js.map",
     "968.065b3972.chunk.js.map": "/ape-top/static/js/968.065b3972.chunk.js.map",
     "802.c650855d.chunk.js.map": "/ape-top/static/js/802.c650855d.chunk.js.map",
@@ -60,6 +61,6 @@
   },
   "entrypoints": [
     "static/css/main.2e0f1011.css",
-    "static/js/main.a711d3bd.js"
+    "static/js/main.e9d53246.js"
   ]
 }
