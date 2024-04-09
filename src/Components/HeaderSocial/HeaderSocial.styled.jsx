@@ -18,7 +18,7 @@ export const NavLinkItem = styled.li`
   width: 48px;
   height: 48px;
   display: flex;
-  z-index: 100;
+
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;

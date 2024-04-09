@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ReactComponent as DiscordSvg } from "../../Images/Svg/Discord.svg";
+import { ReactComponent as OpenSea } from "../../Images/Svg/opensea_logo_icon.svg";
 import { ReactComponent as TwiterSvg } from "../../Images/Svg/Twiter.svg";
 import { useAppContext } from "../context";
 import { NavLinkItem, NavLinkList } from "./HeaderSocial.styled";
@@ -22,11 +23,11 @@ const HeaderSocial = () => {
         </NavLinkItem>
         <NavLinkItem isMenuOpen={isMenuOpen}>
           <a
-            href="https://discord.com/"
+            href="https://opensea.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <DiscordSvg />
+            <OpenSea width={24} />
           </a>
         </NavLinkItem>
         <NavLinkItem isMenuOpen={isMenuOpen}>
