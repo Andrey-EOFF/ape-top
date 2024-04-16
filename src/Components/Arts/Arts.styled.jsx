@@ -89,5 +89,17 @@ export const PrevNextButtons = styled.div`
       color: ${Colors.ColorAkcent};
       transform: scale(1.15);
     }
+
+    &:focus {
+      outline: none;
+      text-shadow: 0 0 5px ${Colors.ColorAkcent};
+    }
+
+    &:disabled {
+
+      color:${Colors.BtnNotActiveColor};
+      pointer-events: none;
+    }
   }
 `;
+

@@ -25,6 +25,9 @@ export const Colors = {
   // Hero Background
 
   BgHeroBtn: "rgba(30, 30, 30, 0.1)",
+
+
+  BtnNotActiveColor: "#636363b8",
 };
 
 export const Utils = {

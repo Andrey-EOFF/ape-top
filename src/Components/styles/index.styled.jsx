@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { Colors } from "./ConstantStyles";
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Container = styled.div`
+// export const Container = styled.div`
 
-  margin: 0 auto;
+//   margin: 0 auto;
 
-`;
+// `;

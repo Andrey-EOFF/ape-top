@@ -120,6 +120,8 @@ export const AboutCont = styled.div`
 `;
 
 export const AboutImg = styled.img`
+  display: block;
+
   width: 100%;
 
   @media (min-width: ${SizeDev.TAB}) {
