@@ -12,7 +12,13 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
   }
+
+  body.disable-scroll {
+    overflow: hidden;
+  }
 `;
+
+
 
 // export const Container = styled.div`
 

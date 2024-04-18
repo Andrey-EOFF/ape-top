@@ -18,7 +18,7 @@ const Reset = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-
+  
 `;
 
 export default Reset;

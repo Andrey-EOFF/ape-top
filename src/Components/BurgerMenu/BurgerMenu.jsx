@@ -20,6 +20,7 @@ const BurgerMenu = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       toggleMenu();
+      document.body.classList.remove("disable-scroll");
     }
   };
 
@@ -36,6 +37,14 @@ const BurgerMenu = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [isMenuOpen, toggleMenu]);
+
+  useEffect(() => {
+    if (isMenuOpen && isWindowLarge) {
+      document.body.classList.add("disable-scroll");
+    } else {
+      document.body.classList.remove("disable-scroll");
+    }
+  }, [isMenuOpen, isWindowLarge]);
 
   return (
     <BurgerMenuSection>
