@@ -31,6 +31,12 @@ export const MenuButton = styled.button`
       isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
   }
 
+  &:focus {
+    outline: 2px solid ${Colors.Akcent};
+    color: ${({ isMenuOpen }) =>
+      isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
+  }
+
   @media screen and (min-width: ${SizeDev.TAB}) {
     color: ${Colors.ColorBlack};
     background-color: ${Colors.BgBtMenu};
