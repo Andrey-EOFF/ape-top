@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev } from "../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
 
 export const ArtsSection = styled.section`
   overflow: hidden;
@@ -82,7 +82,7 @@ export const PrevNextButtons = styled.div`
     font-weight: 400;
     line-height: 1;
     text-align: center;
-
+    transition: ${Utils.transition};
     cursor: pointer;
 
     &:hover {
@@ -91,15 +91,12 @@ export const PrevNextButtons = styled.div`
     }
 
     &:focus {
-      outline: none;
       text-shadow: 0 0 5px ${Colors.ColorAkcent};
     }
 
     &:disabled {
-
-      color:${Colors.BtnNotActiveColor};
+      color: ${Colors.BtnNotActiveColor};
       pointer-events: none;
     }
   }
 `;
-

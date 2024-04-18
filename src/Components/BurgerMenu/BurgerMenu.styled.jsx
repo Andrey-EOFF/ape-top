@@ -43,8 +43,7 @@ export const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-top: 130px;
+  gap: 36px;
 
   cursor: pointer;
 
@@ -99,6 +98,7 @@ export const Span = styled.span`
   line-height: 1.2;
   text-decoration: none;
   transition: border-bottom 0.3s ease, color ${Utils.transition};
+  outline: none; /* Убираем контур по умолчанию */
 
   &:hover {
     border-bottom: 2px solid
@@ -106,6 +106,11 @@ export const Span = styled.span`
     padding-bottom: 2px;
     color: ${({ isMenuOpen }) =>
       isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
+  }
+
+  &:focus {
+    outline: 2px solid ${Colors.Akcent};
+    text-shadow: 0 0 5px ${Colors.ColorAkcent};
   }
 
   @media screen and (min-width: ${SizeDev.TAB}) {
