@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const BurgerMenuSection = styled.div`
   position: absolute;
@@ -23,6 +34,8 @@ export const BurgerMenuSection = styled.div`
   justify-content: space-between;
 
   background-color: ${Colors.BgColorMain};
+
+  animation: ${slideIn} 0.5s ease forwards;
 
   @media screen and (min-width: ${SizeDev.TAB}) {
     display: flex;
@@ -65,6 +78,8 @@ export const NavList = styled.ul`
     border-bottom-left-radius: 12px;
     background-color: ${Colors.BgHeroBtn};
 
+    animation: ${slideIn} 0.5s ease forwards;
+
     @media screen and (min-width: ${SizeDev.DESK}) {
       width: 460px;
       height: 80px;
@@ -98,7 +113,7 @@ export const Span = styled.span`
   line-height: 1.2;
   text-decoration: none;
   transition: border-bottom 0.3s ease, color ${Utils.transition};
-  outline: none; /* Убираем контур по умолчанию */
+  outline: none;
 
   &:hover {
     border-bottom: 2px solid
