@@ -191,6 +191,11 @@ export const PrevNextButtons = styled.div`
       color: ${Colors.ColorAkcent};
       transform: scale(1.15);
     }
+
+    &:disabled {
+      color: ${Colors.BtnNotActiveColor};
+      pointer-events: none;
+    }
   }
 
   @media (min-width: ${SizeDev.TAB}) {

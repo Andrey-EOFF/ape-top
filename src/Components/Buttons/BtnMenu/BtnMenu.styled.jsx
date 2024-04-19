@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, SizeDev, Utils } from "../styles/ConstantStyles";
+import { Colors, SizeDev, Utils } from "../../styles/ConstantStyles";
 
 export const MenuButton = styled.button`
   position: relative;
@@ -34,7 +34,7 @@ export const MenuButton = styled.button`
   /* &:focus {
     outline: 2px solid ${Colors.Akcent};
     color: ${({ isMenuOpen }) =>
-      isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
+    isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
   } */
 
   @media screen and (min-width: ${SizeDev.TAB}) {

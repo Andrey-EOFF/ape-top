@@ -3,7 +3,6 @@ import heroImgMob from "../../Images/Png/heroMob.png";
 import heroImgTab from "../../Images/Png/heroTab.png";
 import heroImgDesk from "../../Images/Png/heroDesk.png";
 import {
-  HeroBtn,
   HeroCont,
   HeroImage,
   HeroMainTitle,
@@ -12,6 +11,7 @@ import {
   HeroTextkOne,
   HeroTextkTwo,
 } from "./Hero.styled";
+import BtnMeet from "../Buttons/BtnMeet/BtnMeet";
 
 const Hero = () => {
   const [screenSize, setScreenSize] = useState("");
@@ -70,9 +70,9 @@ const Hero = () => {
       <HeroTextkTwo>Apes aRe eveRywhere</HeroTextkTwo>
       <HeroImage src={imgSrc} alt="monkey" />
       <HeroCont>
-        <HeroBtn type="button" onClick={() => scrollToSection("mint")}>
+        <BtnMeet type="button" onClick={() => scrollToSection("mint")}>
           Meet Apes
-        </HeroBtn>
+        </BtnMeet>
         <HeroTextThree>
           Yacht Ape is a collection of unique digital apes that you can own in
           NFT format

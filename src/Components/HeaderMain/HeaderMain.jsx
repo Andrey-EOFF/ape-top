@@ -1,8 +1,9 @@
 import React from "react";
 import { HeaderMainSection, LinkLogo, LogoStyle } from "./HeaderMain.styled";
 import { ReactComponent as LogoSvg } from "../../Images/Svg/Logo.svg";
-import BtnMenu from "../Buttons/BtnMenu";
+
 import { useAppContext } from "../context";
+import BtnMenu from "../Buttons/BtnMenu/BtnMenu";
 
 const HeaderMain = () => {
   const { isMenuOpen } = useAppContext();

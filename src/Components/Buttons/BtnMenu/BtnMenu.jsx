@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { MenuButton, Span } from "./BtnMenu.styled";
-import { useAppContext } from "../context";
+import { useAppContext } from "../../context";
 
 const BtnMenu = () => {
   const { isMenuOpen, toggleMenu } = useAppContext();
@@ -11,7 +11,7 @@ const BtnMenu = () => {
     } else {
       document.body.classList.remove("disable-scroll");
     }
-  }, [isMenuOpen ]);
+  }, [isMenuOpen]);
 
   return (
     <>
