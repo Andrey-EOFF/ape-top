@@ -41,7 +41,8 @@ export const NavLinkItem = styled.li`
     transition: ${Utils.transition};
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     path {
       fill: ${({ isMenuOpen }) =>
         isMenuOpen ? Colors.ColorAkcent : Colors.ColorWhite};
@@ -54,7 +55,8 @@ export const NavLinkItem = styled.li`
     path {
       fill: ${Colors.ColorBlack};
     }
-    &:hover {
+    &:hover,
+    &:focus {
       path {
         fill: ${Colors.ColorWhite};
       }

@@ -10,37 +10,31 @@ const HeaderSocial = () => {
   const { isMenuOpen } = useAppContext();
 
   return (
-    <div>
-      <NavLinkList>
-        <NavLinkItem isMenuOpen={isMenuOpen}>
-          <a
-            href="https://discord.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <DiscordSvg />
-          </a>
-        </NavLinkItem>
-        <NavLinkItem isMenuOpen={isMenuOpen}>
-          <a
-            href="https://opensea.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <OpenSea width={24} />
-          </a>
-        </NavLinkItem>
-        <NavLinkItem isMenuOpen={isMenuOpen}>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TwiterSvg />
-          </a>
-        </NavLinkItem>
-      </NavLinkList>
-    </div>
+    <NavLinkList>
+      <NavLinkItem isMenuOpen={isMenuOpen}>
+        <a
+          href="https://discord.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DiscordSvg />
+        </a>
+      </NavLinkItem>
+      <NavLinkItem isMenuOpen={isMenuOpen}>
+        <a href="https://opensea.io/" target="_blank" rel="noopener noreferrer">
+          <OpenSea width={24} />
+        </a>
+      </NavLinkItem>
+      <NavLinkItem isMenuOpen={isMenuOpen}>
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TwiterSvg />
+        </a>
+      </NavLinkItem>
+    </NavLinkList>
   );
 };
 
