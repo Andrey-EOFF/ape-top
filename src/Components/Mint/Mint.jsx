@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Formik } from "formik";
+import "react-toastify/dist/ReactToastify.css";
 import {
   ContentWrapper,
   Heading,
@@ -15,40 +17,47 @@ import {
   BoxField,
   ErrorMessageField,
 } from "./Mint.styled";
-
-import { Formik } from "formik";
 import { Container } from "../App/App.styled";
+import { ToastContainer, toast } from "react-toastify";
 
 const Mint = () => {
   const [buttonText, setButtonText] = useState("MINT");
+
+  const notifySuccess = () => toast.success("Successfully sent");
+  const notifyError = () => toast.error("Error. Please check the entered data");
 
   const handleFormSubmit = async (values, actions) => {
     const isUsernameValid = /^@[A-Za-z0-9_]+$/.test(values.username);
     const isWalletAddressValid = /^1x[0-9a-z]{16}$/;
 
     if (isUsernameValid && isWalletAddressValid) {
-      alert("Форма успішно відправлена");
+      notifySuccess();
       setButtonText("MINTED");
     } else {
+      notifyError();
       setButtonText("ERROR");
     }
 
     actions.resetForm();
   };
 
+  const handleInputFocus = () => {
+    if (buttonText !== "MINT") {
+      setButtonText("MINT");
+    }
+  };
+
   return (
     <Container>
+      <ToastContainer />
       <InWorkSection id="mint">
         <ContentWrapper>
           <Heading>Are you in?</Heading>
-
           <MainText>
             Join the YACHT APE community to be one of the first to receive our
             limited edition NFT
           </MainText>
-
           <CrossIconStyled />
-
           <Formik
             initialValues={{ username: "", walletAddress: "" }}
             onSubmit={handleFormSubmit}
@@ -72,11 +81,11 @@ const Mint = () => {
                     <FormFieldSvg>
                       <StyledDiskForm />
                     </FormFieldSvg>
-
                     <StyledField
                       name="username"
                       type="text"
                       placeholder="@USERNAME"
+                      onFocus={handleInputFocus}
                     />
                     <ErrorMessageField name="username" component="p" />
                   </FormBlockField>
@@ -87,13 +96,12 @@ const Mint = () => {
                     <FormFieldSvg>
                       <StyledMetaForm />
                     </FormFieldSvg>
-
                     <StyledField
                       name="walletAddress"
                       type="text"
                       placeholder="Wallet Address"
+                      onFocus={handleInputFocus}
                     />
-
                     <ErrorMessageField name="walletAddress" component="p" />
                   </FormBlockField>
                 </BoxField>
