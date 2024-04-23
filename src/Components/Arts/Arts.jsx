@@ -4,11 +4,11 @@ import {
   ArtsSection,
   ArtsSlider,
   ArtSlide,
-  PrevNextButtons,
   ArtTitle,
 } from "./Arts.styled";
 import { ArtSlides } from "../Data/ArtsData";
 import { Container } from "../App/App.styled";
+import BtnArrow from "../Buttons/BtnArrow/BtnArrow";
 
 const Arts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,17 +82,13 @@ const Arts = () => {
             />
           ))}
         </ArtsSlider>
-        <PrevNextButtons>
-          <button onClick={handlePrev} disabled={currentSlide === 0}>
-            Prev
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={currentSlide === totalSlides - slidesPerPage}
-          >
-            Next
-          </button>
-        </PrevNextButtons>
+        <BtnArrow
+          handlePrev={handlePrev}
+          handleNext={handleNext}
+          currentIndex={currentSlide}
+          totalItems={totalSlides}
+          slidesPerPage={slidesPerPage}
+        />
       </ArtsSection>
     </Container>
   );

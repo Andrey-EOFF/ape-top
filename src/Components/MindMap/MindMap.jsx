@@ -8,13 +8,14 @@ import {
   MindMapTitle,
   MindMapSection,
   MindArrow,
-  PrevNextButtons,
 } from "./MindMap.styled";
 import { useSwipeable } from "react-swipeable";
 import { Container } from "../App/App.styled";
+import BtnArrow from "../Buttons/BtnArrow/BtnArrow";
 
 const MindMap = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
@@ -34,6 +35,18 @@ const MindMap = () => {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -70,17 +83,14 @@ const MindMap = () => {
             </a>
           ))}
         </CardContainer>
-        <PrevNextButtons>
-          <button onClick={handlePrev} disabled={currentIndex === 0}>
-            Prev
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={currentIndex === MIND_MAP_DATA.length - 1}
-          >
-            Next
-          </button>
-        </PrevNextButtons>
+        {isMobile && (
+          <BtnArrow
+            handlePrev={handlePrev}
+            handleNext={handleNext}
+            currentIndex={currentIndex}
+            totalItems={MIND_MAP_DATA.length}
+          />
+        )}
       </MindMapSection>
     </Container>
   );

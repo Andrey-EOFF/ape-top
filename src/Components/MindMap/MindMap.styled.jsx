@@ -85,6 +85,12 @@ export const Card = styled.li`
   border-radius: 10px;
   color: ${Colors.ColorWhite};
 
+  transition: ${Utils.transition};
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
   img {
     width: 24px;
     height: 24px;
@@ -162,43 +168,5 @@ export const MindArrow = styled(MindSvg)`
   @media (min-width: ${SizeDev.DESK}) {
     width: 40px;
     height: 40px;
-  }
-`;
-
-export const PrevNextButtons = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  width: 150px;
-  margin-top: 24px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  button {
-    border: none;
-    background-color: transparent;
-    color: ${Colors.ColorWhite};
-    font-family: "Biro Script Plus Bold US";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1;
-    text-align: center;
-    transition: ${Utils.transition};
-    cursor: pointer;
-
-    &:hover {
-      color: ${Colors.ColorAkcent};
-      transform: scale(1.15);
-    }
-
-    &:disabled {
-      color: ${Colors.BtnNotActiveColor};
-      pointer-events: none;
-    }
-  }
-
-  @media (min-width: ${SizeDev.TAB}) {
-    display: none;
   }
 `;
