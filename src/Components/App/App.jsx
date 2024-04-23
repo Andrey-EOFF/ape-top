@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
-
-import "./App.styled.jsx";
 import RunningLine from "../RunningLine/RunningLine.jsx";
+import { LoadingWrapper } from "./App.styled.jsx";
 
 const Header = React.lazy(() => import("../Header/Header.jsx"));
 const About = React.lazy(() => import("../About/About.jsx"));
@@ -15,7 +14,11 @@ function App() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={
+        <LoadingWrapper>
+          <div>Loading...</div>
+        </LoadingWrapper>
+      }>
         <About />
         <RunningLine />
         <MindMap />

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   BgBlock,
   BurgerMenuSection,
@@ -12,6 +12,7 @@ import HeaderMain from "../HeaderMain/HeaderMain";
 
 const BurgerMenu = () => {
   const { toggleMenu, isMenuOpen } = useAppContext();
+  const menuRef = useRef(null);
 
   const isWindowLarge = window.innerWidth <= 768;
 
@@ -39,6 +40,20 @@ const BurgerMenu = () => {
   }, [isMenuOpen, toggleMenu]);
 
   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        toggleMenu();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen, toggleMenu]);
+
+  useEffect(() => {
     if (isMenuOpen && isWindowLarge) {
       document.body.classList.add("disable-scroll");
     } else {
@@ -47,7 +62,7 @@ const BurgerMenu = () => {
   }, [isMenuOpen, isWindowLarge]);
 
   return (
-    <BurgerMenuSection>
+    <BurgerMenuSection ref={menuRef}>
       {isWindowLarge && <HeaderMain />}
       <BgBlock>
         <NavList>

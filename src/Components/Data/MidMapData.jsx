@@ -22,6 +22,6 @@ export const MIND_MAP_DATA = [
     text: "",
     icon: true,
     title: "Learn more in mind map",
-    url: "https://internship-space.softryzen.com/",
+    url: "https://andrey-eoff.github.io/ape-top/",
   },
 ];

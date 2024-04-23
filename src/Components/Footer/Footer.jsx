@@ -4,7 +4,7 @@ import { FooterSection, FooterText } from "./Footer.styled";
 const Footer = () => {
   return (
     <FooterSection>
-      <FooterText>© Yacht ape 2024 all rights reserved</FooterText>
+      <FooterText>Made with 🌍 by Andrii YevsiukoFF</FooterText>
     </FooterSection>
   );
 };
