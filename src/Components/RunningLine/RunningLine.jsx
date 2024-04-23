@@ -7,7 +7,7 @@ const RunningLine = () => {
   return (
     <StyledRunningLine>
       <DoubleMarquee marqueeOnStart loop>
-        <div>
+      
           <p>TROY STEREOTYPES</p>
           <span>
             <AboutSharp />
@@ -17,11 +17,10 @@ const RunningLine = () => {
             <AboutSharp />
           </span>
           <p>BREAK RULES</p>
-
           <span>
             <AboutSharp />
           </span>
-        </div>
+       
       </DoubleMarquee>
     </StyledRunningLine>
   );

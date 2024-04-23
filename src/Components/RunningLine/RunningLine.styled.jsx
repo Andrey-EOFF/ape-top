@@ -11,8 +11,6 @@ export const StyledRunningLine = styled.div`
   color: ${Colors.ColorWhite};
 
   div {
-    display: inline-block;
-    align-content: center;
     text-align: center;
     font-family: "Right Grotesk Compact";
     font-size: 36px;
