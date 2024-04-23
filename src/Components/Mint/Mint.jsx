@@ -23,10 +23,8 @@ const Mint = () => {
   const [buttonText, setButtonText] = useState("MINT");
 
   const handleFormSubmit = async (values, actions) => {
-    const isUsernameValid = /^@\w+$/i.test(values.username);
-    const isWalletAddressValid = /^1x[0-9a-fA-F]{16}$/i.test(
-      values.walletAddress
-    );
+    const isUsernameValid = /^@[A-Za-z0-9_]+$/.test(values.username);
+    const isWalletAddressValid = /^1x[0-9a-z]{16}$/;
 
     if (isUsernameValid && isWalletAddressValid) {
       alert("Форма успішно відправлена");
