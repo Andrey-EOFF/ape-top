@@ -1,29 +1,40 @@
 # "Ape-Top"
-This project is part of the web interface development for a specific company or project. It implements various functionalities and components according to the technical task..
+This project is a part of web interface development for a specific company or project/test. It implements various functionalities and components according to the technical task. Implementation - Mobile-first. Responsive layout on mobile. Fixed on tablets and desktops.
 
 # Used Technologies and Libraries
-React
-React Double Marquee
-React Slick
-React Swipeable
-Styled Components
-Web Vitals
+React, React Double Marquee, React Slick, React Swipeable, Styled Components, React-toastify, Formik.
 
 **Additional Comments
 
-The project utilizes functional components and React hooks to create a dynamic interface.
-Modularity of styles is achieved through the use of Styled Components, allowing for the creation of component styles during development.
+The project utilizes functional components and React hooks to create a dynamic interface. Modularity of styles is achieved through the use of Styled Components, allowing for the creation of component styles during development.
 
 # Project Description
 This project is created to showcase web development skills using React.js, HTML, SCSS, and JavaScript. It includes the implementation of various functionalities commonly found in modern web applications and websites.
 
 # Functionalities Implemented in the Project:
-Header with a logo and burger menu.
-Burger menu with a close button, navigation menu, and social media icons.
-Navigation to quickly navigate to the desired section of the website.
-"About" section with a title, text, image, and animated banner.
-MIND map using CSS Grid on tablets and desktops, and a slider on mobile devices.
-FAQ with only one answer open at a time.
-"Arts" section with an adaptive slider.
+"Header" with a logo and burger menu. 
+Burger menu with a close button, navigation menu, and social media icons. Navigation to quickly navigate to the desired section of the website.
 
-© 2024. All rights reserved.
+![Header/Hero](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/header)
+
+**"About"** section with a title, text, image, and animated banner (running line).
+
+![About](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/about)
+
+**"MIND map"** using CSS Grid on tablets and desktops, and a slider on mobile devices.
+
+![MIND map](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/mind)
+
+**"FAQ"** with only one answer open at a time.
+
+![FAQ](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/FAQ)
+
+**"Arts"** section with an adaptive slider.
+
+![Arts](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/arts)
+
+**"Form"** section with validation and form submission confirmation.
+
+![Form](https://github.com/Andrey-EOFF/ape-top/tree/master/src/Images/Readme/form)
+
+© 2024. Made with 🌍 by Andrii YevsiukoFF
