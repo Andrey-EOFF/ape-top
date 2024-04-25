@@ -1,5 +1,7 @@
 # "Ape-Top"
-This project is a part of web interface development for a specific company or project/test. It implements various functionalities and components according to the technical task. Implementation - Mobile-first. Responsive layout on mobile. Fixed on tablets and desktops.
+This project is a part of web interface development for a specific company or project/test. 
+It implements various functionalities and components according to the technical task. 
+**Implementation - Mobile-first.** Responsive layout on mobile. Fixed on tablets and desktops.
 
 # Used Technologies and Libraries
 React, React Double Marquee, React Slick, React Swipeable, Styled Components, React-toastify, Formik.
