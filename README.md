@@ -1,5 +1,5 @@
 # "Ape-Top"
-This project is part of the web interface development for a specific company or project. It implements various functionalities and components according to the technical task.
+This project is part of the web interface development for a specific company or project. It implements various functionalities and components according to the technical task..
 
 # Used Technologies and Libraries
 React
