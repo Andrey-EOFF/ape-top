@@ -15,26 +15,26 @@ This project is created to showcase web development skills using React.js, HTML,
 "Header" with a logo and burger menu. 
 Burger menu with a close button, navigation menu, and social media icons. Navigation to quickly navigate to the desired section of the website.
 
-![Header/Hero](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/header.png)
+![Header/Hero](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/header.png)
 
 **"About"** section with a title, text, image, and animated banner (running line).
 
-![About](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/about.png)
+![About](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/about.png)
 
 **"MIND map"** using CSS Grid on tablets and desktops, and a slider on mobile devices.
 
-![MIND map](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/mind.png)
+![MIND map](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/mind.png)
 
 **"FAQ"** with only one answer open at a time.
 
-![FAQ](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/FAQ.png)
+![FAQ](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/FAQ.png)
 
 **"Arts"** section with an adaptive slider.
 
-![Arts](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/arts.png)
+![Arts](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/arts.png)
 
 **"Form"** section with validation and form submission confirmation.
 
-![Form](https://github.com/Andrey-EOFF/ape-top/blob/main/images/Readme/form.png)
+![Form](https://github.com/Andrey-EOFF/ape-top/blob/master/images/Readme/form.png)
 
 © 2024. Made with 🌍 by Andrii YevsiukoFF
